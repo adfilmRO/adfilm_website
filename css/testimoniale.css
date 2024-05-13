@@ -1,0 +1,54 @@
+.navigation-wrapper {
+  position: relative;
+}
+
+.dots {
+  transition: all;
+  transition-delay: 10ms;
+  transition-timing-function: ease-in;
+  transition-duration: 100ms;
+  display: flex;
+  height: 3rem;
+  padding:10px 0;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  border: none;
+  position: relative;
+  transition: all;
+  transition-delay: 10ms;
+  transition-timing-function: ease-in;
+  transition-duration: 100ms;
+  border-radius: 50%;
+  cursor: pointer;
+}
+ 
+.border-active {
+  box-shadow: 0 0 0 3px #754FBF;  
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: #fff;
+  cursor: pointer;
+}
+
+.arrow--left {
+  left: 5px;
+}
+
+.arrow--right {
+  left: auto;
+  right: 5px;
+}
+
+.arrow--disabled {
+  fill: rgba(255, 255, 255, 0.5);
+  cursor: default;
+}
