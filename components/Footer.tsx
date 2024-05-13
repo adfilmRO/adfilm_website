@@ -18,7 +18,7 @@ const Footer = () => {
           <Link href="/">
             <img
               src="/assets/adfilm_logo.svg"
-              className="select-none w-[226px] h-[52px] "
+              className="select-none w-[226px] h-[52px]"
               draggable={false}
               alt="adfilm footer logo"
             />
@@ -29,7 +29,7 @@ const Footer = () => {
                 <Link
                   href={socialLink.link}
                   key={idx}
-                  className="p-3 rounded-xl border-2 border-white flex justify-center items-center hover:shadow-glow hover:shadow-white transition-all duration-50"
+                  className="p-3 rounded-xl border-2 border-white flex justify-center items-center hover:shadow-glow-purple hover:shadow-white transition-all duration-50"
                 >
                   <img
                     src={socialLink.socialLogo}

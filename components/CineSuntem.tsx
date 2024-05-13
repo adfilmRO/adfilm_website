@@ -1,8 +1,17 @@
 import React from "react";
-import { staffCards } from "@/utils/otherData";
 import StaffCard from "./StaffCard";
 
-const CineSuntem = () => {
+interface Props {
+  data: {
+    name: string;
+    instagramLink: string;
+    image_src: string;
+    position: string;
+  }[];
+}
+
+const CineSuntem = async ({ data }: Props) => {
+  console.log(data);
   return (
     <>
       <div className="flex flex-col items-center">
@@ -10,14 +19,14 @@ const CineSuntem = () => {
           Cine suntem noi?
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[2rem]">
-          {staffCards.map((card, index) => {
+          {data.map((staffCard: any, index: number) => {
             return (
               <StaffCard
                 key={index}
-                name={card.name}
-                instagramLink={card.instagramLink}
-                position={card.position}
-                image_src={card.image_src}
+                name={staffCard.nume}
+                instagramLink={staffCard.instagramLink}
+                position={staffCard.position}
+                image_src={staffCard.image_src}
               />
             );
           })}

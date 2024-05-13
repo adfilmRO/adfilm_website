@@ -15,6 +15,7 @@ const MainPageHeader = () => {
       transition={{ duration: 2 }}
       className="mainBackground select-none 5xl:bg-[center_top_-30rem] lg:bg-[center_top_-9rem] xl:bg-[center_top_-10rem] 2xl:bg-[center_top_-19rem] w-full flex flex-col text-center relative"
     >
+      <div className="mouse-scroll" />
       {windowSize.width < 1024 ? (
         <motion.h1
           initial={{ opacity: 0, y: -100 }}

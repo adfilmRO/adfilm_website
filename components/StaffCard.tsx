@@ -3,6 +3,8 @@ import { StaffCardProps } from "@/utils/types";
 import Image from "next/image";
 import Link from "next/link";
 
+import { urlFor } from "@/app/lib/sanity";
+
 const StaffCard = ({
   name,
   image_src,
@@ -13,7 +15,7 @@ const StaffCard = ({
     <>
       <div className="staffCard staffCardBorder gap-3 text-white w-[280px] h-[392px] items-center rounded-2xl flex flex-col px-1 py-2">
         <img
-          src={image_src}
+          src={urlFor(image_src).url()}
           alt={name + "_portrait"}
           className="w-[260px] select-none shadow-sm shadow-purple-900 h-[263px] rounded-lg staffCardBorder"
           draggable={false}

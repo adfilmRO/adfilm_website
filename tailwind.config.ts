@@ -24,6 +24,7 @@ const config: Config = {
       },
       boxShadow: {
         'glow': '0 0 7px 1px rgba(0, 0, 0, 0.3)',
+        'glow-purple': '0 0 7px 1px rgb(118,86,182)',
       },
       screens: {
         '400px': '400px',

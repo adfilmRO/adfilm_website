@@ -1,11 +1,10 @@
-"use client";
+import { client } from "@/app/lib/sanity";
 
 import MainPageHeader from "@/components/MainPageHeader";
 import ServiciiVideoHeader from "@/components/ServiciiVideoHeader";
 import ServiciiFotoHeader from "@/components/ServiciiFotoHeader";
 import PodcastHeader from "@/components/PodcastHeader";
 import RestOfMainPage from "@/components/RestOfMainPage";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,7 +15,6 @@ export default function Home() {
         <ServiciiFotoHeader />
         <PodcastHeader />
         <RestOfMainPage />
-        <div className="mouse-scroll" />
       </main>
     </>
   );
