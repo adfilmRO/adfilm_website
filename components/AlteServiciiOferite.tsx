@@ -11,7 +11,7 @@ const AlteServiciiOferite = () => {
     <>
       {windowWidth < 1780 ? (
         //  Under 1780 (3 rows)
-        <div className="flex-col justify-center items-center lg:px-[4rem] my-[7rem] lg:mb-[5rem] xl:mb-0 lg:my-0 xl:mt-[8rem] xl:px-[7rem] 2xl:px-[17rem] 1780px:px-[20rem] hidden lg:flex">
+        <div className="flex-col w-full justify-center items-center lg:px-[4rem] my-[7rem] lg:mb-[5rem] xl:mb-0 lg:my-0 xl:mt-[8rem] xl:px-[7rem] 2xl:px-[17rem] 1780px:px-[20rem] hidden lg:flex">
           <motion.h1
             initial={{ opacity: 0, y: -50, scale: 0.5 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -75,7 +75,7 @@ const AlteServiciiOferite = () => {
         </div>
       ) : (
         // Over 1780 (2 rows)
-        <div className="flex-col justify-center items-center lg:px-[4rem] my-[7rem] lg:my-0 xl:mt-[8rem] xl:px-[7rem] 2xl:px-[17rem] 1780px:px-[20rem] hidden lg:flex">
+        <div className="flex-col w-full justify-center items-center my-[7rem] lg:my-0 xl:mt-[6rem] hidden lg:flex">
           <motion.h1
             initial={{ opacity: 0, y: -50, scale: 0.5 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}

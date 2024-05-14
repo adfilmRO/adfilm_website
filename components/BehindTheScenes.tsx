@@ -13,7 +13,7 @@ interface Props {
 const BehindTheScenes = ({ data }: Props) => {
   return (
     <>
-      <div className="flex flex-col justify-center gap-[4rem] items-center lg:px-[4rem] lg:mb-[4rem] xl:mb-0 my-[7rem] lg:my-0 xl:mt-[2rem] xl:px-[7rem] 2xl:px-[17rem] 1780px:px-[20rem]">
+      <div className="flex flex-col w-full justify-center gap-[4rem] items-center lg:mb-[4rem] xl:mb-0 my-[4rem] lg:my-0 xl:mt-[2rem]">
         <motion.h1
           initial={{ opacity: 0, y: -50, scale: 0.5 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -24,7 +24,7 @@ const BehindTheScenes = ({ data }: Props) => {
             stiffness: 100,
             delay: 0.15,
           }}
-          className="text-white font-mustica-semibold text-[32px] mb-[3rem] lg:mb-[0] lg:text-[64px]"
+          className="text-white font-mustica-semibold text-[32px] mb-[0rem] lg:mb-[0] lg:text-[64px]"
         >
           Behind the Scenes
         </motion.h1>
@@ -38,7 +38,7 @@ const BehindTheScenes = ({ data }: Props) => {
             stiffness: 100,
             delay: 0.15,
           }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:w-full lg:h-full lg:px-5 gap-[2rem] place-items-center place-content-center"
+          className="grid w-full grid-cols-1 md:grid-cols-2 lg:w-full lg:h-full gap-[2rem] place-items-center place-content-center"
         >
           {data.map((card, index) => {
             return (

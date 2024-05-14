@@ -17,11 +17,11 @@ const StaffCard = ({
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: -50, scale: 0.5 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{
-          duration: 0.5,
+          duration: 1,
           type: "spring",
           stiffness: 100,
           delay: 0.15,

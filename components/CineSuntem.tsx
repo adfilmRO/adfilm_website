@@ -17,7 +17,7 @@ interface Props {
 const CineSuntem = async ({ data }: Props) => {
   return (
     <>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-full">
         <motion.h1
           initial={{ opacity: 0, y: -50, scale: 0.5 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}

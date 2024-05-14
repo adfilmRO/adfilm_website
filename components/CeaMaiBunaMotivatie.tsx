@@ -24,7 +24,7 @@ const CeaMaiBunaMotivatie = ({ data }: Props) => {
   const mainData = data[0];
   return (
     <>
-      <div className="flex flex-col justify-center lg:justify-start lg:mb-[5rem] xl:mb-0 lg:items-start items-center lg:px-[4rem] mt-[7rem] xl:mt-[8rem] xl:px-[7rem] 2xl:px-[17rem] 1780px:px-[20rem] 1440p:px-[40rem] 4xl:px-[50rem] 5xl:px-[70rem] ">
+      <div className="flex flex-col w-full  justify-center lg:justify-start lg:mb-[5rem] xl:mb-0 lg:items-start items-center mt-[7rem] xl:mt-[8rem] ">
         <div className="container-divider hidden lg:block" />
 
         {windowSize.width < 1024 ? (

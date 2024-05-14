@@ -6,7 +6,7 @@ import Link from "next/link";
 const VideoCard = ({ title, youtube_link }: VideoCardProps) => {
   return (
     <>
-      <div className="staffCard cursor-pointer gap-2 staffCardBorder text-white w-[334px] lg:w-full max-w-[1000px] lg:h-[350px] items-center rounded-2xl flex flex-col lg:items-start px-0 lg:px-2 py-2">
+      <div className="staffCard cursor-pointer gap-2 staffCardBorder text-white w-[334px] lg:w-full max-w-[1200px] lg:h-[350px] items-center rounded-2xl flex flex-col lg:items-start px-0 lg:px-2 py-2">
         <iframe
           id="ytplayer"
           src={youtube_link}

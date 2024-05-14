@@ -32,21 +32,20 @@ const Testimoniale = ({ data }: Props) => {
   });
 
   return (
-    <div className="flex flex-col justify-center gap-[2rem] items-center lg:px-[4rem] mb-[5rem] xl:mt-[8rem] xl:px-[7rem] 2xl:px-[17rem] 1780px:px-[20rem]">
+    <div className="flex w-full flex-col justify-center gap-[2rem] items-center lg:px-[4rem] mb-[5rem] xl:mt-[8rem] xl:px-[7rem] 2xl:px-[17rem] 1780px:px-[20rem]">
       <img
         src="/main_page/double-quotes_svg.svg"
         alt="double quotes"
         className="select-none w-[37px] h-[38px] lg:w-[91px] lg:h-[92px]"
         draggable={false}
       />
-      <div className="navigation-wrapper w-[80%]">
+      <div className="navigation-wrapper w-[80%] lg:w-full">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: -50, scale: 0.5 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
           transition={{
-            duration: 1,
-            velocity: 50,
+            duration: 0.5,
             type: "spring",
             stiffness: 100,
             delay: 0.15,
@@ -116,12 +115,24 @@ const Testimoniale = ({ data }: Props) => {
           ))}
         </div>
       )}
-      <Link
-        href="/portofoliu/video"
-        className="bg-white mt-[2rem] lg:mt-[6rem] justify-center items-center active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple transition-all border-2 border-white hover:text-white hover:bg-transparent duration-200 cursor-pointer w-[13rem] py-2 text-black font-mustica-semibold flex rounded-lg"
+      <motion.div
+        initial={{ opacity: 0, y: -50, scale: 0.5 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          type: "spring",
+          stiffness: 100,
+          delay: 0.15,
+        }}
       >
-        <h1>Contactează-ne acum</h1>
-      </Link>
+        <Link
+          href="/portofoliu/video"
+          className="bg-white mt-[2rem] lg:mt-[3rem] justify-center items-center active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple transition-all border-2 border-white hover:text-white hover:bg-transparent duration-200 cursor-pointer w-[13rem] py-2 text-black font-mustica-semibold flex rounded-lg"
+        >
+          <h1>Contactează-ne acum</h1>
+        </Link>
+      </motion.div>
     </div>
   );
 
