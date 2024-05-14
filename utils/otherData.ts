@@ -55,28 +55,28 @@ export const staffCards: StaffCardProps[] = [
   },
 ];
 
-export const videoCards: VideoCardProps[] = [
-  {
-    title: "Titlu Nume Video",
-    youtube_link: "placeholder",
-    image_src: "main_page/podcast_placeholder.png",
-  },
-  {
-    title: "Titlu Nume Video",
-    youtube_link: "placeholder",
-    image_src: "main_page/podcast_placeholder.png",
-  },
-  {
-    title: "Titlu Nume Video",
-    youtube_link: "placeholder",
-    image_src: "main_page/podcast_placeholder.png",
-  },
-  {
-    title: "Titlu Nume Video",
-    youtube_link: "placeholder",
-    image_src: "main_page/podcast_placeholder.png",
-  },
-];
+// export const videoCards: VideoCardProps[] = [
+//   {
+//     title: "Titlu Nume Video",
+//     youtube_link: "https://www.youtube.com/embed/ufyMLbFe08M?si=3PoGth6hEXABwZKU",
+//     image_src: "main_page/podcast_placeholder.png",
+//   },
+//   {
+//     title: "Titlu Nume Video",
+//     youtube_link: "https://www.youtube.com/embed/ufyMLbFe08M?si=3PoGth6hEXABwZKU",
+//     image_src: "main_page/podcast_placeholder.png",
+//   },
+//   {
+//     title: "Titlu Nume Video",
+//     youtube_link: "https://www.youtube.com/embed/ufyMLbFe08M?si=3PoGth6hEXABwZKU",
+//     image_src: "main_page/podcast_placeholder.png",
+//   },
+//   {
+//     title: "Titlu Nume Video",
+//     youtube_link: "https://www.youtube.com/embed/ufyMLbFe08M?si=3PoGth6hEXABwZKU",
+//     image_src: "main_page/podcast_placeholder.png",
+//   },
+// ];
 
 export const alteServicii: {
   title: string;

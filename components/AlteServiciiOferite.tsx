@@ -10,7 +10,7 @@ const AlteServiciiOferite = () => {
     <>
       {windowWidth < 1780 ? (
         //  Under 1780 (3 rows)
-        <div className="flex-col justify-center items-center lg:px-[4rem] my-[7rem] lg:my-0 xl:mt-[8rem] xl:px-[7rem] 2xl:px-[17rem] 1780px:px-[20rem] hidden lg:flex">
+        <div className="flex-col justify-center items-center lg:px-[4rem] my-[7rem] lg:mb-[5rem] xl:mb-0 lg:my-0 xl:mt-[8rem] xl:px-[7rem] 2xl:px-[17rem] 1780px:px-[20rem] hidden lg:flex">
           <h1 className="text-[64px] font-mustica-semibold text-white mb-[3rem]">
             Alte servicii oferite
           </h1>

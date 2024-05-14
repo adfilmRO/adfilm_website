@@ -1,5 +1,3 @@
-import { client } from "@/app/lib/sanity";
-
 import MainPageHeader from "@/components/MainPageHeader";
 import ServiciiVideoHeader from "@/components/ServiciiVideoHeader";
 import ServiciiFotoHeader from "@/components/ServiciiFotoHeader";

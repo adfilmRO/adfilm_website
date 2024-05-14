@@ -15,6 +15,5 @@ export type SideNavItem = {
   
   export type VideoCardProps = {
     title: string;
-    image_src: string | 'placeholder';
     youtube_link: string;
   }

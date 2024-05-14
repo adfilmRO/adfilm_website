@@ -11,7 +11,7 @@ interface Props {
 }
 
 const CineSuntem = async ({ data }: Props) => {
-  console.log(data);
+  
   return (
     <>
       <div className="flex flex-col items-center">

@@ -4,10 +4,20 @@ import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "@/css/testimoniale.css";
-import { testimoniale } from "@/utils/otherData";
 import Link from "next/link";
 
-const Testimoniale = () => {
+import { urlFor } from "@/app/lib/sanity";
+
+interface Props {
+  data: {
+    nume: string;
+    image_src: string;
+    position: string;
+    description: string;
+  }[];
+}
+
+const Testimoniale = ({ data }: Props) => {
   const [currentSlide, setCurrentSlide] = useState<any>(0);
   const [loaded, setLoaded] = useState<any>(false);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -30,7 +40,7 @@ const Testimoniale = () => {
       />
       <div className="navigation-wrapper w-[80%]">
         <div ref={sliderRef} className="keen-slider">
-          {testimoniale.map((testimonial, index) => {
+          {data.map((testimonial, index) => {
             return (
               <div
                 className="keen-slider__slide flex flex-col items-center justify-center"
@@ -40,10 +50,10 @@ const Testimoniale = () => {
                   {testimonial.description}
                 </p>
                 <h1 className="text-white font-mustica-semibold mt-6 lg:mt-10 lg:text-[22px]">
-                  {testimonial.name}{" "}
+                  {testimonial.nume}{" "}
                 </h1>
                 <h1 className="text-white font-mustica-semibold mt-2 lg:text-[18px]">
-                  {testimonial.profession}{" "}
+                  {testimonial.position}{" "}
                 </h1>
               </div>
             );
@@ -65,7 +75,7 @@ const Testimoniale = () => {
               }
               disabled={
                 currentSlide ===
-                instanceRef.current.track.details.slides.length - 1
+                instanceRef.current.track.details?.slides.length - 1
               }
             />
           </>
@@ -74,9 +84,9 @@ const Testimoniale = () => {
 
       {loaded && instanceRef.current && (
         <div className="dots">
-          {testimoniale.map((testimonial, idx) => (
+          {data.map((testimonial, idx) => (
             <img
-              src={testimonial.dot_background}
+              src={urlFor(testimonial.image_src).url()}
               key={idx}
               onClick={() => {
                 instanceRef.current?.moveToIdx(idx);
