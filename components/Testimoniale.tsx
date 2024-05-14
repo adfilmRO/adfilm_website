@@ -5,6 +5,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "@/css/testimoniale.css";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import { urlFor } from "@/app/lib/sanity";
 
@@ -39,7 +40,20 @@ const Testimoniale = ({ data }: Props) => {
         draggable={false}
       />
       <div className="navigation-wrapper w-[80%]">
-        <div ref={sliderRef} className="keen-slider">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1,
+            velocity: 50,
+            type: "spring",
+            stiffness: 100,
+            delay: 0.15,
+          }}
+          ref={sliderRef}
+          className="keen-slider"
+        >
           {data.map((testimonial, index) => {
             return (
               <div
@@ -58,7 +72,7 @@ const Testimoniale = ({ data }: Props) => {
               </div>
             );
           })}
-        </div>
+        </motion.div>
         {loaded && instanceRef.current && (
           <>
             <Arrow

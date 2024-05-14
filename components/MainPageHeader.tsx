@@ -12,7 +12,7 @@ const MainPageHeader = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 2, type: "spring", stiffness: 100 }}
       className="mainBackground select-none 5xl:bg-[center_top_-30rem] lg:bg-[center_top_-9rem] xl:bg-[center_top_-10rem] 2xl:bg-[center_top_-19rem] w-full flex flex-col text-center relative"
     >
       <div className="mouse-scroll" />
@@ -20,7 +20,12 @@ const MainPageHeader = () => {
         <motion.h1
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, times: [0, 1] }}
+          transition={{
+            duration: 1,
+            times: [0, 1],
+            type: "spring",
+            stiffness: 100,
+          }}
           className="text-5xl font-mustica-medium text-white z-[10] mt-[19rem] 400px:mt-[25rem]"
         >
           Studio <br /> de producție
@@ -29,7 +34,12 @@ const MainPageHeader = () => {
         <motion.h1
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, times: [0, 1] }}
+          transition={{
+            duration: 1,
+            times: [0, 1],
+            type: "spring",
+            stiffness: 100,
+          }}
           className="text-8xl font-mustica-medium text-white z-[10] mt-[30rem] 2xl:mt-[35rem] mb-[1rem] 3xl:mt-[50rem] 1440p:mt-[65rem] 4xl:mt-[70rem] 5xl:mt-[80rem] 4k:mt-[110rem] "
         >
           Studio de producție
@@ -40,7 +50,13 @@ const MainPageHeader = () => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, times: [0, 1] }}
+          transition={{
+            duration: 0.4,
+            times: [0, 1],
+            type: "spring",
+            stiffness: 100,
+            delay: 0.2,
+          }}
         >
           <Link
             href="/portofoliu/video"
@@ -52,7 +68,13 @@ const MainPageHeader = () => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, times: [0, 1] }}
+          transition={{
+            duration: 0.6,
+            times: [0, 1],
+            type: "spring",
+            stiffness: 100,
+            delay: 0.4,
+          }}
         >
           <Link
             href="/portofoliu/foto"
@@ -64,7 +86,13 @@ const MainPageHeader = () => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, times: [0, 1] }}
+          transition={{
+            duration: 1,
+            times: [0, 1],
+            type: "spring",
+            stiffness: 100,
+            delay: 0.6,
+          }}
         >
           <Link
             href="/portofoliu/foto"

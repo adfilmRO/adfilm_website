@@ -127,7 +127,7 @@
 }
 
 .restOfMainPage-section {
-  background: url("/main_page/big_bg.jpg");
+  background: url("/main_page/big_bg_smallsize.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   scroll-snap-align: start;
