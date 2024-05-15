@@ -95,7 +95,7 @@ const MainPageHeader = () => {
           }}
         >
           <Link
-            href="/portofoliu/foto"
+            href="/portofoliu/podcast"
             className="py-3 px-7 text-white bg-gray-300 bg-transparent hover:bg-white lg:hover:bg-transparent hover:text-black lg:bg-white lg:active:bg-adfilm-purple active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple lg:text-black lg:hover:text-white bg-opacity-40 rounded-lg flex justify-center items-center duration-400 transition-all border-white border-2 hover:bg-transparent"
           >
             <p className="font-mustica-medium text-xl">Podcast</p>

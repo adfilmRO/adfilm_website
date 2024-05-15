@@ -10,9 +10,7 @@ const ServiciiFotoHeader = () => {
   const windowSize = useWindowSize();
   return (
     <>
-      <motion.div
-        className="fotoBackground md:bg-[center_top_-5rem] lg:bg-[center_top_-9rem] xl:bg-[center_top_0rem] 2xl:bg-[center_top_-10rem] select-none w-full flex flex-col relative"
-      >
+      <motion.div className="fotoBackground md:bg-[center_top_-5rem] lg:bg-[center_top_-9rem] xl:bg-[center_top_0rem] 2xl:bg-[center_top_-10rem] select-none w-full flex flex-col relative">
         <div className="absolute hidden lg:block top-0 left-0 bg-gradient-to-b from-black opacity-100 to-transparent w-full h-[5rem] " />
         <div className="absolute hidden lg:block bottom-0 left-0 bg-gradient-to-t from-black opacity-100 to-transparent w-full h-[5rem] " />
 
@@ -20,7 +18,7 @@ const ServiciiFotoHeader = () => {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+          transition={{ duration: 0.8, stiffness: 100 }}
           className="absolute overflow-hidden lg:bottom-[7rem] lg:left-[5rem] bottom-0 left-0 w-full backdrop-blur-lg h-[20rem] z-[10] justify-start bg-black bg-opacity-70 flex-col border-t-[1.5px] border-gray-700 lg:border rounded-tr-lg lg:shadow-sm lg:shadow-purple-900 rounded-tl-lg lg:rounded-bl-lg lg:rounded-br-lg lg:w-[563px] lg:h-[253px] "
         >
           <div className="cardglowbackground absolute bottom-0 right-0 w-full h-full z-[0] flex flex-col gap-4 ">
@@ -48,7 +46,12 @@ const ServiciiFotoHeader = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, type: "spring", stiffness: 100, delay: 0.25 }}
+          transition={{
+            duration: 1,
+            type: "spring",
+            stiffness: 100,
+            delay: 0.25,
+          }}
           className="w-[92%] left-0 right-0 mx-auto m-auto h-[1rem] absolute bottom-[3rem] dotted-divider"
         />
       </motion.div>

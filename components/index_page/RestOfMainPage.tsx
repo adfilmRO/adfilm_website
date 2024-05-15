@@ -1,11 +1,11 @@
-import LuamArta from "@/components/LuamArta";
-import CineSuntem from "@/components/CineSuntem";
-import BehindTheScenes from "@/components/BehindTheScenes";
-import CeaMaiBunaMotivatie from "@/components/CeaMaiBunaMotivatie";
-import AlteServiciiOferite from "@/components/AlteServiciiOferite";
-import ParteneriSiColaboratori from "@/components/ParteneriSiColaboratori";
-import Testimoniale from "@/components/Testimoniale";
-import Footer from "@/components/Footer";
+import LuamArta from "@/components/index_page/LuamArta";
+import CineSuntem from "@/components/index_page/CineSuntem";
+import BehindTheScenes from "@/components/index_page/BehindTheScenes";
+import CeaMaiBunaMotivatie from "@/components/index_page/CeaMaiBunaMotivatie";
+import AlteServiciiOferite from "@/components/index_page/AlteServiciiOferite";
+import ParteneriSiColaboratori from "@/components/index_page/ParteneriSiColaboratori";
+import Testimoniale from "@/components/index_page/Testimoniale";
+import Footer from "@/components/index_page/Footer";
 import {
   getCopyData,
   getStaffCardData,

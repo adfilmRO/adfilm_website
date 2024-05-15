@@ -50,7 +50,7 @@ const Header = () => {
               transition={{ duration: 1 }}
             >
               <Image
-                src="assets/adfilm_logo.svg"
+                src="/assets/adfilm_logo.svg"
                 width={96}
                 height={22.33}
                 className="select-none cursor-pointer"
@@ -65,7 +65,7 @@ const Header = () => {
               transition={{ duration: 1 }}
             >
               <Image
-                src="assets/adfilm_logo.svg"
+                src="/assets/adfilm_logo.svg"
                 width={129}
                 height={30}
                 className="select-none cursor-pointer mt-[2rem]"
@@ -153,7 +153,7 @@ const Header = () => {
                 {otherData.phoneNumber}
               </p>
               <Image
-                src="assets/phone_icon.svg"
+                src="/assets/phone_icon.svg"
                 width={20}
                 height={20}
                 className="select-none cursor-pointer ml-5"

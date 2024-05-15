@@ -1,6 +1,6 @@
 "use client";
 
-import VideoCard from "@/components/VideoCard";
+import VideoCard from "@/components/index_page/VideoCard";
 import { motion } from "framer-motion";
 
 interface Props {
