@@ -1,7 +1,8 @@
+"use client";
+
 import React from "react";
 import { VideoCardProps } from "@/utils/types";
 import Image from "next/image";
-import Link from "next/link";
 
 const VideoCard = ({ title, youtube_link }: VideoCardProps) => {
   return (

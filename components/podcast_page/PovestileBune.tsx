@@ -24,7 +24,10 @@ const PovestileBune = () => {
         <div className="mb-[4rem]">
           <VideoCard title="Titlu Nume Video" youtube_link="Youtube Link" />
         </div>
-        <GlassList />
+        <div className="flex flex-col gap-[3rem] lg:grid lg:grid-cols-2 lg:w-full">
+          <GlassList />
+          <GlassList />
+        </div>
       </div>
     </>
   );

@@ -3,12 +3,14 @@
 import Header from "@/components/podcast_page/Header";
 import RestOfPodcastPage from "@/components/podcast_page/RestOfPodcastPage";
 
-const page = () => {
+const page = async () => {
   return (
-    <main className="w-full flex flex-col justify-center items-center relative">
-      <Header />
-      <RestOfPodcastPage />
-    </main>
+    <>
+      <main className="w-full relative flex flex-col justify-center items-center">
+        <Header />
+        <RestOfPodcastPage />
+      </main>
+    </>
   );
 };
 
