@@ -158,6 +158,33 @@
   /* change this on large screen */
 }
 
+@media only screen and (min-width: 455px) {
+  .podcastPageBackground {
+    background: url("/main_page/podcast_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0rem; 
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .podcastPageBackground {
+    background: url("/main_page/podcast_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -5rem; 
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .podcastPageBackground {
+    background: url("/main_page/podcast_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -7rem; 
+  }
+}
+
 @media only screen and (min-width: 900px) {
   .podcastBackground {
     background-position: center left 0rem;
@@ -250,6 +277,7 @@
   background: url("/assets/dotteddivider.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .staffCard {
@@ -412,6 +440,13 @@
     #b39de4 54.07%,
     #ffffff 68.5%
   );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cool-text-gradient-podcast-page {
+  background: linear-gradient(268.3deg, #F2F3FA 44.01%, #B39DE4 65.4%, #FFFFFF 77.24%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

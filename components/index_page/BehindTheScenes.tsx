@@ -42,11 +42,13 @@ const BehindTheScenes = ({ data }: Props) => {
         >
           {data.map((card, index) => {
             return (
-              <VideoCard
-                key={index}
-                title={card.title}
-                youtube_link={card.youtube_link}
-              />
+              <div className="lg:h-[350px] w-full flex justify-center items-center">
+                <VideoCard
+                  key={index}
+                  title={card.title}
+                  youtube_link={card.youtube_link}
+                />
+              </div>
             );
           })}
         </motion.div>

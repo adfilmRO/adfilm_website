@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { VideoCardProps } from "@/utils/types";
 import Image from "next/image";
@@ -7,7 +5,7 @@ import Image from "next/image";
 const VideoCard = ({ title, youtube_link }: VideoCardProps) => {
   return (
     <>
-      <div className="staffCard cursor-pointer gap-2 staffCardBorder text-white w-[334px] lg:w-full max-w-[1200px] lg:h-[350px] items-center rounded-2xl flex flex-col lg:items-start px-0 lg:px-2 py-2">
+      <div className="staffCard cursor-pointer gap-2 staffCardBorder text-white w-[334px] lg:w-full h-full items-center rounded-2xl flex flex-col lg:items-start px-0 lg:px-2 py-2">
         <iframe
           id="ytplayer"
           src={youtube_link}

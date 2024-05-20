@@ -1,0 +1,14 @@
+.swiper-button-next {
+    color: white;
+    scale: 50%;
+    right: -0.5rem;
+    background: transparent;
+    user-select: none;
+}
+
+.swiper-button-prev {
+    color: white;
+    scale: 50%;
+    left: -0.5rem;
+    user-select: none;
+}
