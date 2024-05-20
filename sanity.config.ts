@@ -1,7 +1,7 @@
 import { defineConfig } from "sanity";
 import {structureTool} from 'sanity/structure'
 
-import { schemaTypes } from "@/adfilm-sanity/schemaTypes";
+import { schemaTypes } from "./adfilm-sanity/schemaTypes";
 
 const config = defineConfig({
   title: "Adfilm Website",
