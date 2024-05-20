@@ -9,6 +9,9 @@ import {
   getPodcastVideo,
   getPodcastList,
 } from "@/utils/fetchData";
+import { REVALIDATE_INTERVAL } from "@/utils/revalidate";
+
+export const revalidate = REVALIDATE_INTERVAL;
 
 const page = async () => {
   const podcastCopyData = await getPodcastCopy();

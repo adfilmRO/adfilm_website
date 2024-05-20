@@ -12,6 +12,7 @@ import {
   getBehindTheScenesData,
   getParteneriData,
   getTestimonialeData,
+  revalidate,
 } from "@/utils/fetchData";
 
 const RestOfMainPage = async () => {
@@ -20,7 +21,6 @@ const RestOfMainPage = async () => {
   const behindTheScenesData = await getBehindTheScenesData();
   const parteneriData = await getParteneriData();
   const testimonialeData = await getTestimonialeData();
-
   return (
     <>
       <main className="restOfMainPage-section cool-background-i-dont-have-yet w-full flex flex-col justify-center items-center relative">

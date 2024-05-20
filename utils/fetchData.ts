@@ -1,6 +1,9 @@
 import { client } from "@/app/lib/sanity";
+import { REVALIDATE_INTERVAL } from "./revalidate";
 
 //  Main Page (START)
+
+export const revalidate = REVALIDATE_INTERVAL
 
 export async function getStaffCardData() {
     const query = `*[_type == 'staff'] {
