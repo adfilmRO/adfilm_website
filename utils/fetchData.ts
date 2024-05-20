@@ -4,7 +4,6 @@ import { REVALIDATE_INTERVAL } from "./revalidate";
 //  Main Page (START)
 
 export const revalidate = REVALIDATE_INTERVAL
-
 export async function getStaffCardData() {
     const query = `*[_type == 'staff'] {
       nume,
@@ -104,4 +103,25 @@ export async function getPodcastGallery() {
    const data = await client.fetch(query)
    return data
 }
+
+export async function getFooterData() {
+  const query = `*[_type == 'footerData'] {
+    detail1,
+      detail2,
+      detail3
+  }`
+   const data = await client.fetch(query)
+   return data
+}
+
+export async function getFooterSocialLinks() {
+  const query = `*[_type == 'footerSocialLinks'] {
+    name,
+      image_src,
+      link
+  }`
+   const data = await client.fetch(query)
+   return data
+}
+
 

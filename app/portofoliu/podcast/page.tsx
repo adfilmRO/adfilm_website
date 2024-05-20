@@ -8,6 +8,8 @@ import {
   getPodcastGallery,
   getPodcastVideo,
   getPodcastList,
+  getFooterData,
+  getFooterSocialLinks,
 } from "@/utils/fetchData";
 import { REVALIDATE_INTERVAL } from "@/utils/revalidate";
 
@@ -18,6 +20,8 @@ const page = async () => {
   const podcastGalleryData = await getPodcastGallery();
   const podcastVideoData = await getPodcastVideo();
   const podcastListData = await getPodcastList();
+  const footerData = await getFooterData();
+  const footerSocialLinksData = await getFooterSocialLinks();
 
   return (
     <>
@@ -28,6 +32,8 @@ const page = async () => {
           podcastGalleryData={podcastGalleryData}
           podcastVideoData={podcastVideoData}
           podcastListData={podcastListData}
+          footerData={footerData}
+          footerSocialLinksData={footerSocialLinksData}
         />
       </main>
     </>

@@ -34,6 +34,8 @@ const RestOfPodcastPage = ({
   podcastCopyData,
   podcastGalleryData,
   podcastListData,
+  footerData,
+  footerSocialLinksData,
 }: any) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [blackOverlay, setBlackOverlay] = useState<boolean>(false);
@@ -203,7 +205,10 @@ const RestOfPodcastPage = ({
           </motion.div>
         </div>
 
-        <Footer />
+        <Footer
+          footerData={footerData}
+          footerSocialLinksData={footerSocialLinksData}
+        />
       </main>
     </>
   );

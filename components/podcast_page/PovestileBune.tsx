@@ -54,7 +54,7 @@ const PovestileBune = ({
             stiffness: 100,
             delay: 0.15,
           }}
-          className="cool-text-gradient-podcast-page text-[18px] text-center text-white font-mustica-semibold lg:text-[32px] lg:max-w-[50rem] xl:max-w-[70rem] max-w-[20rem] "
+          className="cool-text-gradient-podcast-page-daca-ai text-[18px] text-center text-white font-mustica-semibold lg:text-[32px] lg:max-w-[50rem] xl:max-w-[70rem] max-w-[20rem] "
         >
           {podcastCopyData[0].title2}
         </motion.p>

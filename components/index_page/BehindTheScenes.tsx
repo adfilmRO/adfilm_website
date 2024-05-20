@@ -42,7 +42,10 @@ const BehindTheScenes = ({ data }: Props) => {
         >
           {data.map((card, index) => {
             return (
-              <div className="lg:h-[350px] w-full flex justify-center items-center">
+              <div
+                key={index}
+                className="lg:h-[350px] w-full flex justify-center items-center"
+              >
                 <VideoCard
                   key={index}
                   title={card.title}

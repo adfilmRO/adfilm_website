@@ -12,7 +12,8 @@ import {
   getBehindTheScenesData,
   getParteneriData,
   getTestimonialeData,
-  revalidate,
+  getFooterData,
+  getFooterSocialLinks,
 } from "@/utils/fetchData";
 
 const RestOfMainPage = async () => {
@@ -21,6 +22,9 @@ const RestOfMainPage = async () => {
   const behindTheScenesData = await getBehindTheScenesData();
   const parteneriData = await getParteneriData();
   const testimonialeData = await getTestimonialeData();
+  const footerData = await getFooterData();
+  const footerSocialLinksData = await getFooterSocialLinks();
+
   return (
     <>
       <main className="restOfMainPage-section cool-background-i-dont-have-yet w-full flex flex-col justify-center items-center relative">
@@ -34,7 +38,10 @@ const RestOfMainPage = async () => {
           <ParteneriSiColaboratori data={parteneriData} />
           <Testimoniale data={testimonialeData} />
         </div>
-        <Footer />
+        <Footer
+          footerData={footerData}
+          footerSocialLinksData={footerSocialLinksData}
+        />
       </main>
     </>
   );

@@ -452,6 +452,14 @@
   background-clip: text;
 }
 
+.cool-text-gradient-podcast-page-daca-ai {
+  background: linear-gradient(252.76deg, #F2F3FA 29.99%, #B39DE4 64.13%, #FFFFFF 90.78%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .custom-grid {
   display: grid;
   grid-template-columns: repeat(20, minmax(0, 1fr));

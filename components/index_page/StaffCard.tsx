@@ -31,7 +31,7 @@ const StaffCard = ({
         <img
           src={urlFor(image_src).url()}
           alt={name + "_portrait"}
-          className="w-[260px] select-none shadow-sm shadow-purple-900 h-[263px] rounded-lg staffCardBorder"
+          className="w-[260px] select-none shadow-sm shadow-purple-900 h-[263px] rounded-lg object-cover object-top staffCardBorder"
           draggable={false}
         />
         <Link

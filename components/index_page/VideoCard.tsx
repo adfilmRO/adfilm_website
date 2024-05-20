@@ -1,11 +1,10 @@
 import React from "react";
 import { VideoCardProps } from "@/utils/types";
-import Image from "next/image";
 
 const VideoCard = ({ title, youtube_link }: VideoCardProps) => {
   return (
     <>
-      <div className="staffCard cursor-pointer gap-2 staffCardBorder text-white w-[334px] lg:w-full h-full items-center rounded-2xl flex flex-col lg:items-start px-0 lg:px-2 py-2">
+      <div className="staffCard cursor-pointer staffCardBorder text-white w-[334px] lg:w-full h-full items-center rounded-2xl flex flex-col lg:items-start px-0 lg:px-2 py-2">
         <iframe
           id="ytplayer"
           src={youtube_link}
@@ -16,16 +15,14 @@ const VideoCard = ({ title, youtube_link }: VideoCardProps) => {
           draggable={false}
         />
 
-        <div className="flex gap-2 flex-row lg:justify-start lg:items-center justify-center lg:pl-2 items-center">
-          <Image
+        <div className="flex gap-2 w-full lg:py-3 py-[.2rem] flex-row lg:justify-start lg:items-center justify-center lg:pl-2 items-center">
+          <img
             src="/assets/youtube_logo.svg"
             alt="youtube logo"
-            width={17.44}
-            height={12.21}
             draggable={false}
-            className="w-auto h-auto select-none"
+            className="select-none w-[17.44px] h-[12.21px] lg:w-[40px] lg:h-[25px]"
           />
-          <h1 className="font-mustica-semibold text-[14px] lg:text-[24px]">
+          <h1 className="font-mustica-semibold text-[14px] lg:text-[24px] select-none">
             {title}
           </h1>
         </div>
