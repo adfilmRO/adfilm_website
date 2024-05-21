@@ -8,12 +8,14 @@ import { motion } from "framer-motion";
 
 const MainPageHeader = () => {
   const windowSize = useWindowSize();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2, type: "spring", stiffness: 100 }}
-      className="mainBackground select-none 5xl:bg-[center_top_-30rem] lg:bg-[center_top_-9rem] xl:bg-[center_top_-10rem] 2xl:bg-[center_top_-19rem] w-full flex flex-col text-center relative"
+      className={`mainBackground 
+       select-none 5xl:bg-[center_top_-30rem] lg:bg-[center_top_-9rem] xl:bg-[center_top_-10rem] 2xl:bg-[center_top_-19rem] w-full flex flex-col text-center relative`}
     >
       <div className="mouse-scroll" />
       {windowSize.width < 1024 ? (
@@ -65,7 +67,10 @@ const MainPageHeader = () => {
             <p className="font-mustica-medium text-xl">Video</p>
           </Link>
         </motion.div>
-        <motion.div
+
+        {/* No Foto :( */}
+
+        {/* <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -83,6 +88,8 @@ const MainPageHeader = () => {
             <p className="font-mustica-medium text-xl">Foto</p>
           </Link>
         </motion.div>
+         */}
+
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}

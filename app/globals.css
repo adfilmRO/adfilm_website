@@ -117,6 +117,11 @@
   );
 }
 
+.shadowText {
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
+
+}
+
 .mainBackground {
   background: url("/main_page/main_bg.jpg");
   background-repeat: no-repeat;
@@ -140,6 +145,12 @@
   background-size: cover;
 }
 
+.restOfVideoPage-section {
+  background: url("/main_page/big_bg_smallsize.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 .podcastBackground {
   background: url("/main_page/podcast_bg.jpg");
@@ -155,6 +166,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -4rem; 
+  /* change this on large screen */
+}
+
+.videoPageBackground {
+  background: url("/main_page/serviciivideo_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   /* change this on large screen */
 }
 

@@ -4,8 +4,9 @@ import { REVALIDATE_INTERVAL } from "./revalidate";
 //  Main Page (START)
 
 export const revalidate = REVALIDATE_INTERVAL
+
 export async function getStaffCardData() {
-    const query = `*[_type == 'staff'] {
+    const query = `*[_type == 'staff'] | order(_updatedAt desc) {
       nume,
         position,
         instagramLink,
@@ -56,6 +57,15 @@ export async function getStaffCardData() {
         position,
         image_src
      } `
+     const data = await client.fetch(query)
+     return data
+  }
+
+  export async function getLuamArtaData() {
+    const query = `*[_type == 'luamArta'] {
+      title,
+        secondaryTitle
+    }`
      const data = await client.fetch(query)
      return data
   }
@@ -123,5 +133,15 @@ export async function getFooterSocialLinks() {
    const data = await client.fetch(query)
    return data
 }
+
+export async function getVideoCopyData() {
+  const query = `*[_type == 'videoCopy'] {
+    title
+  } `
+   const data = await client.fetch(query)
+   return data
+}
+
+
 
 

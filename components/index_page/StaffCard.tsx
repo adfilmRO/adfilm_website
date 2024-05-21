@@ -28,7 +28,9 @@ const StaffCard = ({
         }}
         className="staffCard staffCardBorder gap-3 text-white w-[280px] h-[392px] items-center rounded-2xl flex flex-col px-1 py-2"
       >
-        <img
+        <Image
+          width={300}
+          height={300}
           src={urlFor(image_src).url()}
           alt={name + "_portrait"}
           className="w-[260px] select-none shadow-sm shadow-purple-900 h-[263px] rounded-lg object-cover object-top staffCardBorder"

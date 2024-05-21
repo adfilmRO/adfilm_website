@@ -197,7 +197,7 @@ const RestOfPodcastPage = ({
               Deci, când începem?
             </h1>
             <Link
-              href="/portofoliu/video"
+              href="/contact"
               className="bg-white flex justify-center items-center active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple transition-all border-2 border-white hover:text-white hover:bg-transparent duration-200 cursor-pointer w-[13rem] py-2 text-black font-mustica-semibold rounded-lg"
             >
               <h1>Contactează-ne acum</h1>

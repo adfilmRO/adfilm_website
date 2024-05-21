@@ -5,12 +5,11 @@ import React from "react";
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { motion } from "framer-motion";
 
-const LuamArta = () => {
+const LuamArta = ({ data }: any) => {
   const windowSize = useWindowSize();
   return (
     <>
       <div className="flex flex-col justify-center items-center pb-[8rem] relative w-full">
-
         {windowSize.width < 1024 ? (
           // Mobile
           <motion.h1
@@ -23,11 +22,9 @@ const LuamArta = () => {
               stiffness: 100,
               delay: 0.15,
             }}
-            className="font-mustica-semibold lg:text-[64px] text-[32px] text-center text-white mt-[7rem] mb-[6rem]"
+            className="font-mustica-semibold max-w-[19rem] lg:text-[64px] text-[32px] text-center text-white mt-[7rem] mb-[6rem]"
           >
-            Luăm arta în serios <br /> și adăugăm <br /> profesionalism în tot{" "}
-            <br />
-            ceea ce facem!
+            {data[0].title}
           </motion.h1>
         ) : (
           // PC
@@ -41,10 +38,9 @@ const LuamArta = () => {
               stiffness: 100,
               delay: 0.25,
             }}
-            className="font-mustica-semibold text-[32px] lg:text-[64px] text-center text-white mt-[7rem] mb-[3rem]"
+            className="font-mustica-semibold max-w-[51rem] text-[32px] lg:text-[64px] text-center text-white mt-[7rem] mb-[3rem]"
           >
-            Luăm arta în serios și <br /> adăugăm profesionalism în
-            <br /> tot ceea ce facem!
+            {data[0].title}
           </motion.h1>
         )}
 
@@ -78,10 +74,9 @@ const LuamArta = () => {
                 stiffness: 100,
                 delay: 0.15,
               }}
-              className="text-white text-center text-[16px] font-montserrat mb-[2rem] "
+              className="text-white text-center max-w-[20rem] text-[16px] font-montserrat mb-[2rem] "
             >
-              Când 5 este prea puțin, noi <br /> aducem în cadru experiența{" "}
-              <br /> noastră de 6 stele.
+              {data[0].secondaryTitle}
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: -50, scale: 0.5 }}
@@ -95,7 +90,7 @@ const LuamArta = () => {
               }}
             >
               <Link
-                href="/portofoliu/video"
+                href="/contact"
                 className="bg-white justify-center items-center active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple transition-all border-2 border-white hover:text-white hover:bg-transparent duration-200 cursor-pointer w-[13rem] py-2 text-black font-mustica-semibold flex rounded-lg"
               >
                 <h1>Contactează-ne acum</h1>
@@ -117,7 +112,7 @@ const LuamArta = () => {
               }}
             >
               <Link
-                href="/portofoliu/video"
+                href="/contact"
                 className="bg-white mb-[2rem] justify-center items-center active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple transition-all border-2 border-white hover:text-white hover:bg-transparent duration-200 cursor-pointer w-[13rem] py-2 text-black font-mustica-semibold flex rounded-lg"
               >
                 <h1>Contactează-ne acum</h1>
@@ -151,10 +146,9 @@ const LuamArta = () => {
                 stiffness: 100,
                 delay: 0.15,
               }}
-              className="text-white text-center text-[16px] font-montserrat mb-[2rem] "
+              className="text-white text-center max-w-[30rem] text-xl font-montserrat mb-[2rem] "
             >
-              Când 5 este prea puțin, noi aducem în cadru
-              <br /> experiența noastră de 6 stele.
+              {data[0].secondaryTitle}
             </motion.p>
           </>
         )}

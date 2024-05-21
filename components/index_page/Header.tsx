@@ -115,12 +115,14 @@ const Header = () => {
                 <div className="navMenuLine h-[1.5px] w-full bg-no-repeat mt-1" />
               </Link>
 
-              <Link href="/portofoliu/foto">
+              {/* old foto link */}
+
+              {/* <Link href="/portofoliu/foto">
                 <p className="font-montserrat text-md hover:font-bold transition-all duration-75">
                   Foto
                 </p>
                 <div className="navMenuLine h-[1.5px] w-full bg-no-repeat mt-1" />
-              </Link>
+              </Link> */}
 
               <Link href="/portofoliu/video">
                 <p className="font-montserrat text-md hover:font-bold transition-all duration-75">

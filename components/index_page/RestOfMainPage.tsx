@@ -14,6 +14,7 @@ import {
   getTestimonialeData,
   getFooterData,
   getFooterSocialLinks,
+  getLuamArtaData,
 } from "@/utils/fetchData";
 
 const RestOfMainPage = async () => {
@@ -24,13 +25,14 @@ const RestOfMainPage = async () => {
   const testimonialeData = await getTestimonialeData();
   const footerData = await getFooterData();
   const footerSocialLinksData = await getFooterSocialLinks();
+  const luamArtaData = await getLuamArtaData();
 
   return (
     <>
       <main className="restOfMainPage-section cool-background-i-dont-have-yet w-full flex flex-col justify-center items-center relative">
         <div className="absolute hidden lg:block top-0 left-0 bg-gradient-to-b from-black opacity-100 to-transparent w-full h-[5rem] " />
         <div className="wrapper lg:w-[95%] xl:w-[90%] 1780px:w-[70%] max-w-[130rem] w-full flex flex-col justify-center items-center">
-          <LuamArta />
+          <LuamArta data = {luamArtaData} />
           <CineSuntem data={staffCardData} />
           <CeaMaiBunaMotivatie data={copyData} />
           <BehindTheScenes data={behindTheScenesData} />

@@ -17,7 +17,22 @@ interface Props {
 const CineSuntem = ({ data }: Props) => {
   return (
     <>
-      <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col items-center justify-center w-full relative md:mt-[20rem]">
+        <motion.img
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1,
+            stiffness: 100,
+            delay: 0.15,
+          }}
+          src="/main_page/fiveHeaderLAST.png"
+          alt="faces Header"
+          className="top-[-23rem] transition-[0.2] xl:top-[-26rem] 2xl:top-[-30rem] hidden md:block select-none absolute"
+          draggable={false}
+        />
+
         <motion.h1
           initial={{ opacity: 0, y: -50, scale: 0.5 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -28,11 +43,11 @@ const CineSuntem = ({ data }: Props) => {
             stiffness: 100,
             delay: 0.15,
           }}
-          className="text-white font-mustica-semibold text-[32px] mb-[3rem] lg:text-[64px]"
+          className="text-white shadowText font-mustica-semibold text-[32px] mb-[3rem] lg:text-[64px] z-[10]"
         >
           Cine suntem noi?
         </motion.h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[2rem]">
+        <div className="flex flex-col md:flex-row md:flex-wrap md:justify-center md:items-center gap-[2rem] max-w-[1400px]">
           {data.map((staffCard: any, index: number) => {
             return (
               <StaffCard

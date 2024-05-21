@@ -8,7 +8,7 @@ import Link from "next/link";
 const Header = () => {
   return (
     <>
-      <div className="podcastPageBackground flex flex-col relative w-full h-[353px] lg:h-[500px] 1440p:h-[800px] 4k:h-[1200px] items-center">
+      <div className="videoPageBackground md:bg-[center_-15rem] xl:bg-[center_-20rem] 2xl:bg-[center_-25rem] 1780px:bg-[center_-37rem] 4k:bg-[center_-60rem] flex flex-col relative w-full h-[353px] lg:h-[500px] 1440p:h-[800px] 4k:h-[1200px] items-center">
         <div className="absolute lg:block top-0 left-0 bg-gradient-to-b from-black opacity-100 to-transparent w-full h-[10rem]" />
         <div className="absolute lg:block bottom-0 left-0 bg-gradient-to-t from-black opacity-100 to-transparent w-full h-[10rem]" />
         <motion.p
@@ -23,7 +23,7 @@ const Header = () => {
           }}
           className="text-white text-[46px] font-mustica-semibold mt-[16rem] lg:mt-[24.35rem] 1440p:mt-[43rem] 4k:mt-[68rem] z-[10] lg:text-[122px] "
         >
-          Podcast
+          Servicii Video
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}

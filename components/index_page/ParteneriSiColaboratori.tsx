@@ -69,7 +69,7 @@ const ParteneriSiColaboratori = ({ data }: Props) => {
                   src={urlFor(logo.image_src).url()}
                   alt={logo.alt}
                   draggable={false}
-                  className="select-none"
+                  className="select-none h-[3rem]"
                   aria-label={logo.nume}
                 />
               </li>
@@ -87,7 +87,7 @@ const ParteneriSiColaboratori = ({ data }: Props) => {
                   src={urlFor(logo.image_src).url()}
                   alt={logo.alt}
                   draggable={false}
-                  className="select-none"
+                  className="select-none h-[3rem]"
                   aria-label={logo.nume}
                 />
               </li>

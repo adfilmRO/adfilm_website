@@ -34,6 +34,7 @@ const Footer = ({ footerData, footerSocialLinksData }: any) => {
                 <Link
                   href={socialLink.link}
                   key={idx}
+                  target="_blank"
                   className="p-3 rounded-xl border-2 border-white flex justify-center items-center hover:shadow-glow-purple hover:shadow-white transition-all duration-50"
                 >
                   <img
@@ -180,6 +181,7 @@ const Footer = ({ footerData, footerSocialLinksData }: any) => {
                   <Link
                     href={socialLink.link}
                     key={idx}
+                    target="_blank"
                     className="p-3 rounded-xl border-2 border-white flex justify-center items-center hover:shadow-glow hover:shadow-white transition-all duration-50"
                   >
                     <img
