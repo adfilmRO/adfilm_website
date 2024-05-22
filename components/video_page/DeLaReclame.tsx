@@ -19,7 +19,7 @@ const DeLaReclame = ({ videoCopyData }: any) => {
   const [category, setCategory] = useState<categoryType>("Commercials");
   const dropdown: any = useRef(null);
 
-  const loadingInterval = 1000;
+  const loadingInterval = 250;
 
   useEffect(() => {
     changeCategory("Commercials");
