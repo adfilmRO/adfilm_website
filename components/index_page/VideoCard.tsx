@@ -1,6 +1,10 @@
 import { VideoCardProps } from "@/utils/types";
 import { YouTube } from "react-youtube-lazyload";
-// import "react-youtube-lazyload/dist/index.css";
+import "react-youtube-lazyload/dist/index.css";
+
+//  _2hdkJ className for the video picture
+// _16Q0f className for the player
+//
 
 const VideoCard = ({ title, youtube_link }: VideoCardProps) => {
   return (
@@ -8,11 +12,11 @@ const VideoCard = ({ title, youtube_link }: VideoCardProps) => {
       <div className="staffCard cursor-pointer staffCardBorder text-white w-[334px] lg:w-full h-full items-center rounded-2xl flex flex-col lg:items-start px-0 lg:px-2 py-2">
         <YouTube
           id="ytplayer"
-          videoId="UHciHtsuFnw"
+          videoId={youtube_link}
           privacy={true}
           allowFullScreen
           aria-label={title}
-          className="select-none w-[314px] h-[166px] shadow-sm shadow-purple-900 lg:h-full lg:w-full rounded-lg staffCardBorder"
+          className="select-none oveflow-hidden w-[314px] h-[166px] shadow-sm shadow-purple-900 lg:h-full lg:w-full rounded-lg staffCardBorder"
           draggable={false}
         />
 

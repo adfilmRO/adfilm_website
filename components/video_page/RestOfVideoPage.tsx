@@ -2,7 +2,7 @@ import Footer from "@/components/index_page/Footer";
 import DeLaReclame from "./DeLaReclame";
 
 // src = {urlFor(image_src).url()}
-import AlteServiciiOferite from "@/components/index_page/AlteServiciiOferite";
+
 const RestOfVideoPage = ({
   footerData,
   footerSocialLinksData,

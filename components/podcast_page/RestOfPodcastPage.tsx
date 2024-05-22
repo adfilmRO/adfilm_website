@@ -75,14 +75,16 @@ const RestOfPodcastPage = ({
                     setBlackOverlay(false);
                     allowScroll();
                   }}
-                  className="absolute w-[64px] h-[44px] cursor-pointer border border-white text-white flex justify-center items-center bg-black rounded-lg bg-opacity-80 top-[5rem] right-[3rem] lg:top-[5rem] lg:right-[13rem] "
+                  className="flex justify-center items-center absolute h-[10rem] w-[10rem] z-[1000] top-[5rem] right-[-0.5rem] xl:top-[5rem] xl:right-[13rem]"
                 >
-                  <img
-                    src="/assets/closeButton.svg"
-                    alt="close Gallery Button"
-                    className="select-none"
-                    draggable={false}
-                  />
+                  <div className="z-[1000] w-[64px] h-[44px] cursor-pointer border border-white text-white flex justify-center items-center bg-black rounded-lg bg-opacity-80">
+                    <img
+                      src="/assets/closeButton.svg"
+                      alt="close Gallery Button"
+                      className="select-none"
+                      draggable={false}
+                    />
+                  </div>
                 </div>
                 <div className="w-full h-[20rem] flex justify-center items-center">
                   <Swiper

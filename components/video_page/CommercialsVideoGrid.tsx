@@ -1,108 +1,94 @@
-import React from "react";
 import VideoCard from "@/components/index_page/VideoCard";
 
-
 const CommercialsVideoGrid = () => {
+  const testVideos = [
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+    {
+      title: "title test",
+      youtube_link: "Mm-HR6DfcYI",
+    },
+  ];
+
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <h1 className="text-white text-[32px] font-mustica-semibold">
+      <h1 className="text-white text-[32px] mb-[2rem] font-mustica-semibold">
         Commercials
       </h1>
-      <div className="all-videos w-full">
-        {/* MAIN VIDEO */}
 
-        <div className="my-[2rem] lg:w-full lg:h-[650px] flex justify-center items-center">
-          <VideoCard
-            title={"test"}
-            youtube_link={
-              "https://www.youtube.com/embed/-CJF2ZvlhQs?si=HUJzu_4wQig5ZzUp"
-            }
-          />
-        </div>
-
-        {/* END OF MAIN VIDEO */}
-
-        {/* SECOND ROW 2 VIDEOS */}
-
-        <div className="flex flex-col lg:flex-row lg:w-full justify-center lg:h-[334px] items-center my-[2rem] lg:my-[3rem] gap-[2rem] lg:gap-[3rem] ">
-          <div className="lg:w-1/2 lg: h-full ">
-            <VideoCard
-              title={"test"}
-              youtube_link={
-                "https://www.youtube.com/embed/-CJF2ZvlhQs?si=HUJzu_4wQig5ZzUp"
-              }
-            />
-          </div>
-          <div className="lg:w-1/2 lg:h-full">
-            <VideoCard
-              title={"test"}
-              youtube_link={
-                "https://www.youtube.com/embed/-CJF2ZvlhQs?si=HUJzu_4wQig5ZzUp"
-              }
-            />
-          </div>
-        </div>
-
-        {/* END OF SECOND ROW 2 VIDEOS */}
-
-        {/* SECOND MAIN VIDEO */}
-
-        <div className="my-[2rem] lg:w-full lg:h-[650px] flex justify-center items-center">
-          <VideoCard
-            title={"test"}
-            youtube_link={
-              "https://www.youtube.com/embed/-CJF2ZvlhQs?si=HUJzu_4wQig5ZzUp"
-            }
-          />
-        </div>
-
-        {/* SECOND END OF MAIN VIDEO */}
-
-        {/* THIRD ROW 2 VIDEOS */}
-
-        <div className="flex flex-col lg:flex-row lg:w-full justify-center lg:h-[334px] items-center my-[2rem] lg:my-[3rem] gap-[2rem] lg:gap-[3rem] ">
-          <div className="lg:w-1/2 lg: h-full ">
-            <VideoCard
-              title={"test"}
-              youtube_link={
-                "https://www.youtube.com/embed/-CJF2ZvlhQs?si=HUJzu_4wQig5ZzUp"
-              }
-            />
-          </div>
-          <div className="lg:w-1/2 lg:h-full">
-            <VideoCard
-              title={"test"}
-              youtube_link={
-                "https://www.youtube.com/embed/-CJF2ZvlhQs?si=HUJzu_4wQig5ZzUp"
-              }
-            />
-          </div>
-        </div>
-
-        {/* END OF THIRD ROW 2 VIDEOS */}
-
-        {/* FOURTH ROW 2 VIDEOS */}
-
-        <div className="flex flex-col lg:flex-row lg:w-full justify-center lg:h-[334px] items-center my-[2rem] lg:my-[3rem] gap-[2rem] lg:gap-[3rem]">
-          <div className="lg:w-1/2 lg: h-full ">
-            <VideoCard
-              title={"test"}
-              youtube_link={
-                "https://www.youtube.com/embed/-CJF2ZvlhQs?si=HUJzu_4wQig5ZzUp"
-              }
-            />
-          </div>
-          <div className="lg:w-1/2 lg:h-full">
-            <VideoCard
-              title={"test"}
-              youtube_link={
-                "https://www.youtube.com/embed/-CJF2ZvlhQs?si=HUJzu_4wQig5ZzUp"
-              }
-            />
-          </div>
-        </div>
-
-        {/* END OF FOURTH ROW 2 VIDEOS */}
+      <div className="grid lg:grid-cols-2 grid-cols-1 w-full auto-rows-auto gap-[2rem] justify-center items-center place-items-center place-content-center mb-[4rem] lg:mb-[3rem]">
+        {testVideos.map((video, index) => {
+          if (index === 0 || index % 3 === 0) {
+            return (
+              <div
+                key={index}
+                className="w-full h-full lg:col-span-2 lg:lg:h-[650px] flex justify-center items-center"
+              >
+                <VideoCard
+                  title={video.title}
+                  youtube_link={video.youtube_link}
+                />
+              </div>
+            );
+          } else
+            return (
+              <div
+                key={index}
+                className="w-full h-full flex lg:h-[334px] justify-center items-center"
+              >
+                <VideoCard
+                  title={video.title}
+                  youtube_link={video.youtube_link}
+                />
+              </div>
+            );
+        })}
       </div>
     </div>
   );
