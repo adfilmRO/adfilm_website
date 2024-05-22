@@ -1,5 +1,5 @@
 import { VideoCardProps } from "@/utils/types";
-import { YouTube } from "react-youtube-lazyload";
+import CustomYouTube from "@/components/video_page/CustomYouTube";
 import "react-youtube-lazyload/dist/index.css";
 
 //  _2hdkJ className for the video picture
@@ -10,14 +10,11 @@ const VideoCard = ({ title, youtube_link }: VideoCardProps) => {
   return (
     <>
       <div className="staffCard cursor-pointer staffCardBorder text-white w-[334px] lg:w-full h-full items-center rounded-2xl flex flex-col lg:items-start px-0 lg:px-2 py-2">
-        <YouTube
-          id="ytplayer"
+        <CustomYouTube
           videoId={youtube_link}
           privacy={true}
-          allowFullScreen
           aria-label={title}
           className="select-none oveflow-hidden w-[314px] h-[166px] shadow-sm shadow-purple-900 lg:h-full lg:w-full rounded-lg staffCardBorder"
-          draggable={false}
         />
 
         <div className="flex gap-2 w-full lg:py-3 py-[.2rem] flex-row lg:justify-start lg:items-center justify-center lg:pl-2 items-center">
