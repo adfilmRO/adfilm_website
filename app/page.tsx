@@ -12,10 +12,12 @@ export const revalidate = REVALIDATE_INTERVAL;
 export default function Home() {
   return (
     <>
-      <main className={`bg-black h-[100vh] scroll-snap-container`}>
+      <main
+        className={`bg-black h-[100vh] scroll-snap-container overflow-x-hidden`}
+      >
         <MainPageHeader />
         <ServiciiVideoHeader />
-        <ServiciiFotoHeader />
+        {/* <ServiciiFotoHeader /> */}
         <PodcastHeader />
         <RestOfMainPage />
       </main>

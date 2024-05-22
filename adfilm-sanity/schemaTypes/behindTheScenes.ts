@@ -1,7 +1,7 @@
 export default {
   name: 'behindTheScenes',
   type: 'document',
-  title: 'Behind The Scenes',
+  title: 'Behind The Scenes (Main Page)',
   fields: [
     {
       name: 'title',

@@ -3,7 +3,12 @@
 import Header from "@/components/video_page/Header";
 import RestOfVideoPage from "@/components/video_page/RestOfVideoPage";
 
-import { getVideoCopyData } from "@/utils/fetchData";
+import {
+  getBehindTheScenesVideos,
+  getCommercialsVideos,
+  getOthersVideos,
+  getVideoCopyData,
+} from "@/utils/fetchData";
 import { REVALIDATE_INTERVAL } from "@/utils/revalidate";
 
 export const revalidate = REVALIDATE_INTERVAL;
@@ -14,6 +19,9 @@ const page = async () => {
   const footerData = await getFooterData();
   const footerSocialLinksData = await getFooterSocialLinks();
   const videoCopyData = await getVideoCopyData();
+  const commercialsVideoData = await getCommercialsVideos();
+  const othersVideoData = await getOthersVideos();
+  const behindTheScenesVideoData = await getBehindTheScenesVideos();
 
   return (
     <>
@@ -23,6 +31,9 @@ const page = async () => {
           footerData={footerData}
           footerSocialLinksData={footerSocialLinksData}
           videoCopyData={videoCopyData}
+          commercialsVideoData={commercialsVideoData}
+          othersVideoData={othersVideoData}
+          behindTheScenesVideoData={behindTheScenesVideoData}
         />
       </main>
     </>

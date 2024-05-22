@@ -1,61 +1,6 @@
 import VideoCard from "@/components/index_page/VideoCard";
 
-const CommercialsVideoGrid = () => {
-  const testVideos = [
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-    {
-      title: "title test",
-      youtube_link: "Mm-HR6DfcYI",
-    },
-  ];
-
+const CommercialsVideoGrid = ({ data }: any) => {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <h1 className="text-white text-[32px] mb-[2rem] font-mustica-semibold">
@@ -63,7 +8,7 @@ const CommercialsVideoGrid = () => {
       </h1>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 w-full auto-rows-auto gap-[2rem] justify-center items-center place-items-center place-content-center mb-[4rem] lg:mb-[3rem]">
-        {testVideos.map((video, index) => {
+        {data.map((video: any, index: any) => {
           if (index === 0 || index % 3 === 0) {
             return (
               <div

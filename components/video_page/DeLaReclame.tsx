@@ -10,20 +10,22 @@ import CommercialsVideoGrid from "./CommercialsVideoGrid";
 import BehindTheScenesVideoGrid from "./BehindTheScenesVideoGrid";
 import OthersVideoGrid from "./OthersVideoGrid";
 import AlteServiciiOferite from "@/components/index_page/AlteServiciiOferite";
+import ScrollToTopButton from "./ScrollToTop";
 
 type categoryType = "Commercials" | "Behind The Scenes" | "Others";
 
-const DeLaReclame = ({ videoCopyData }: any) => {
+const DeLaReclame = ({
+  videoCopyData,
+  commercialsVideoData,
+  othersVideoData,
+  behindTheScenesVideoData,
+}: any) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [category, setCategory] = useState<categoryType>("Commercials");
   const dropdown: any = useRef(null);
 
-  const loadingInterval = 250;
-
-  useEffect(() => {
-    changeCategory("Commercials");
-  }, []);
+  const loadingInterval = Math.floor(Math.random() * (1000 - 300 + 1)) + 300;
 
   const changeCategory = (selectedCategory: categoryType) => {
     if (selectedCategory === category) return;
@@ -48,7 +50,7 @@ const DeLaReclame = ({ videoCopyData }: any) => {
             stiffness: 100,
             delay: 0.15,
           }}
-          className="cool-text-gradient-podcast-page text-center text-[32px] leading-[44px] max-w-[22rem] lg:max-w-[60rem] text-white font-mustica-semibold "
+          className="cool-text-gradient-podcast-page mb-[3rem] lg:mb-[2rem] text-center text-[32px] leading-[44px] max-w-[22rem] lg:max-w-[60rem] text-white font-mustica-semibold "
         >
           {videoCopyData[0].title}
         </motion.h1>
@@ -69,7 +71,7 @@ const DeLaReclame = ({ videoCopyData }: any) => {
           <div
             className={`absolute top-[3.5rem] ${
               isOpen === true ? "flex" : "hidden"
-            } cursor-default right-0 p-5 text-white rounded-lg bg-black bg-opacity-70 border border-white flex-col gap-2 w-full`}
+            } cursor-default right-0 p-5 text-white rounded-lg bg-black bg-opacity-90 border border-white flex-col gap-2 w-full`}
           >
             <p
               onClick={() => changeCategory("Commercials")}
@@ -136,14 +138,17 @@ const DeLaReclame = ({ videoCopyData }: any) => {
         ) : (
           <>
             {category === "Commercials" ? (
-              <CommercialsVideoGrid />
+              <CommercialsVideoGrid data={commercialsVideoData} />
             ) : category === "Others" ? (
-              <OthersVideoGrid />
+              <OthersVideoGrid data={othersVideoData} />
             ) : (
-              <BehindTheScenesVideoGrid />
+              <BehindTheScenesVideoGrid data={behindTheScenesVideoData} />
             )}
           </>
         )}
+        <div className="mb-[3rem] lg:mb-0 z-[10]">
+          <ScrollToTopButton />
+        </div>
 
         {/* VIDEO GRID */}
         <div className="xl:mt-[-5rem]">

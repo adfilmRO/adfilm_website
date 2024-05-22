@@ -7,12 +7,20 @@ const RestOfVideoPage = ({
   footerData,
   footerSocialLinksData,
   videoCopyData,
+  commercialsVideoData,
+  othersVideoData,
+  behindTheScenesVideoData,
 }: any) => {
   return (
     <>
-      <main className="restOfVideoPage-section w-full flex flex-col justify-center items-center relative">
+      <main className="restOfVideoPage-section w-full flex flex-col justify-center items-center relative overflow-x-hidden">
         <div className="wrapper lg:w-[95%] xl:w-[90%] 1780px:w-[60%] max-w-[130rem] w-full flex flex-col justify-center items-center">
-          <DeLaReclame videoCopyData={videoCopyData} />
+          <DeLaReclame
+            videoCopyData={videoCopyData}
+            commercialsVideoData={commercialsVideoData}
+            othersVideoData={othersVideoData}
+            behindTheScenesVideoData={behindTheScenesVideoData}
+          />
         </div>
         <Footer
           footerData={footerData}

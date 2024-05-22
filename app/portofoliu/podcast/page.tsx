@@ -25,7 +25,7 @@ const page = async () => {
 
   return (
     <>
-      <main className="w-full relative flex flex-col justify-center items-center">
+      <main className="w-full relative flex flex-col justify-center items-center overflow-x-hidden">
         <Header />
         <RestOfPodcastPage
           podcastCopyData={podcastCopyData}

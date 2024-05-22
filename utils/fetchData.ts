@@ -142,6 +142,40 @@ export async function getVideoCopyData() {
    return data
 }
 
+// Podcast Page (END)
+
+// Video Page (START)
+
+export async function getCommercialsVideos() {
+  const query = `*[_type == 'commercialsVideo'] | order(_updatedAt desc) {
+    title,
+      youtube_link
+  } `
+   const data = await client.fetch(query)
+   return data
+}
+
+export async function getOthersVideos() {
+  const query = `*[_type == 'othersVideos'] | order(_updatedAt desc) {
+    title,
+      youtube_link
+  } `
+   const data = await client.fetch(query)
+   return data
+}
+
+
+export async function getBehindTheScenesVideos() {
+  const query = `*[_type == 'behindTheScenesVideos'] | order(_updatedAt desc) {
+    title,
+      youtube_link
+  } `
+   const data = await client.fetch(query)
+   return data
+}
+
+
+// Video Page (END)
 
 
 

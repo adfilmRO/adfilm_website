@@ -28,7 +28,7 @@ const Footer = ({ footerData, footerSocialLinksData }: any) => {
               alt="adfilm footer logo"
             />
           </Link>
-          <div className="flex flex-row w-full justify-between max-w-[20rem] sm:max-w-[18rem]">
+          <div className="flex flex-row flex-wrap w-full justify-between max-w-[20rem] sm:max-w-[18rem]">
             {footerSocialLinksData.map((socialLink: any, idx: any) => {
               return (
                 <Link
@@ -175,7 +175,7 @@ const Footer = ({ footerData, footerSocialLinksData }: any) => {
                 alt="adfilm footer logo"
               />
             </Link>
-            <div className="flex flex-row gap-[1.1rem]">
+            <div className="flex flex-row flex-wrap gap-[1.1rem]">
               {footerSocialLinksData.map((socialLink: any, idx: any) => {
                 return (
                   <Link
