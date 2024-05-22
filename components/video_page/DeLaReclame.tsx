@@ -134,7 +134,7 @@ const DeLaReclame = ({
 
         {/* VIDEO GRID */}
         {isLoading === false ? (
-          <div className="lg:w-full w-[90%] videoLoading-Animation rounded-xl h-[60rem] bg-purple-500 opacity-20 p-2 animate-pulse "></div>
+          <div className="lg:w-full w-[90%] videoLoading-Animation rounded-xl h-[150rem] bg-purple-500 opacity-20 p-2 animate-pulse "></div>
         ) : (
           <>
             {category === "Commercials" ? (
