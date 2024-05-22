@@ -39,7 +39,8 @@ const Header = () => {
         "border-none": selectedLayout,
       })}
     >
-      ${/* dont remove the $, trust me just dont. */}
+      <p className="opacity-0">$</p>
+      {/* dont remove the $, trust me just dont. */}
       <div className="w-full absolute top-0 left-0 bg-gradient-to-b from-black to-transparent h-16 opacity-80" />
       <div className="fixed w-full flex justify-between items-center px-8 h-10 pt-0 lg:h-0 ">
         <Link href="/" className="z-[5]">

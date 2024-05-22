@@ -146,7 +146,7 @@ const DeLaReclame = ({
             )}
           </>
         )}
-        <div className="mb-[3rem] lg:mb-0 z-[10]">
+        <div className="mb-[4rem] lg:mb-0 z-[10]">
           <ScrollToTopButton />
         </div>
 

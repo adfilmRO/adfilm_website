@@ -4,7 +4,7 @@ const ScrollToTopButton = () => {
   const scrollToTop = () => {
     if (typeof window !== "undefined") {
       window.scrollTo({
-        top: 0,
+        top: 600,
         behavior: "smooth",
       });
     }

@@ -153,6 +153,12 @@
 }
 
 
+.restOfContactPage-section {
+  background: url("/main_page/big_bg_smallsize.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .podcastBackground {
   background: url("/main_page/podcast_bg.jpg");
   background-repeat: no-repeat;
@@ -175,6 +181,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   /* change this on large screen */
+}
+
+.contactPageBackground {
+  background: url("/main_page/contact_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media only screen and (min-width: 455px) {
@@ -533,4 +545,72 @@ background: linear-gradient(
   display: grid;
   grid-template-columns: repeat(20, minmax(0, 1fr));
   overflow: hidden;
+}
+
+/* Hide the default checkbox */
+[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style for the custom checkbox container */
+.custom-checkbox {
+  display: inline-block;
+  width: 2rem; /* Adjust size as needed */
+  height: 2rem; /* Adjust size as needed */
+  background-color: transparent;
+  position: relative;
+}
+
+/* Style for the checkbox inner */
+.checkbox-inner {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid #ccc; /* Adjust border color */
+  border-radius: 50%; /* Makes it round */
+}
+
+/* Style for the custom checkbox when checked */
+[type="checkbox"]:checked + .custom-checkbox .checkbox-inner {
+  background-color: #333; /* Adjust color when checked */
+}
+
+/* Style for the checkmark icon */
+[type="checkbox"]:checked + .custom-checkbox .checkbox-inner::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem; /* Adjust size of the checkmark */
+  height: 1rem; /* Adjust size of the checkmark */
+  border: solid white; /* Checkmark color */
+  border-width: 0 2px 2px 0; /* Style of the checkmark */
+  transform: rotate(45deg); /* Rotates the checkmark */
+}
+
+/* Style for the checked state */
+.checkbox-inner.checked {
+  background-color: #333; /* Adjust color when checked */
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  color: #000;
+  width: 4px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+  transform: translateX(-38px);
+  animation: l21 .5s infinite alternate linear;
+}
+
+@keyframes l21 {
+  50%  {box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px}
+  100% {box-shadow: 19px 0 0 0  , 38px 0 0 3px, 57px 0 0 7px}
 }
