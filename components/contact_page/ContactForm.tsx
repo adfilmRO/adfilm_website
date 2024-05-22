@@ -29,7 +29,7 @@ const ContactForm = () => {
     subiect: Yup.string().required("Subiectul este obligatoriu."),
     mesaj: Yup.string()
       .required("Mesajul este obligatoriu.")
-      .min(50, "Mesajul trebuie sa aibe macar 50 de caractere."),
+      .min(50, "Mesajul trebuie să aibă măcar 50 de caractere."),
   });
 
   return (
