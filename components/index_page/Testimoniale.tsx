@@ -84,10 +84,10 @@ const Testimoniale = ({ data }: Props) => {
                 <p className="text-center font-montserrat text-[#F2F3FA] leading-[24px] lg:leading-[32px] lg:text-[16px] lg:w-[764px] text-[12px] w-[262px] sm:min-w-[262px] sm:w-auto sm:max-w-[80%]">
                   {testimonial.description}
                 </p>
-                <h1 className="text-white font-mustica-semibold mt-6 lg:mt-10 lg:text-[22px]">
+                <h1 className="text-white font-mustica-semibold mt-6 lg:mt-10 lg:text-[22px] text-center">
                   {testimonial.nume}{" "}
                 </h1>
-                <h1 className="text-white font-mustica-semibold mt-2 lg:text-[18px]">
+                <h1 className="text-white font-mustica-semibold mt-2 lg:text-[18px] text-center">
                   {testimonial.position}{" "}
                 </h1>
               </div>
