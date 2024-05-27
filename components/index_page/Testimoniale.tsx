@@ -21,6 +21,8 @@ interface Props {
 const Testimoniale = ({ data }: Props) => {
   const [currentSlide, setCurrentSlide] = useState<any>(0);
   const [loaded, setLoaded] = useState<any>(false);
+  const [isInteracted, setIsInteracted] = useState(false);
+
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     slideChanged(slider) {
@@ -29,7 +31,24 @@ const Testimoniale = ({ data }: Props) => {
     created() {
       setLoaded(true);
     },
+    loop: true,
   });
+
+  useEffect(() => {
+    if (!isInteracted) {
+      const interval = setInterval(() => {
+        if (instanceRef.current) {
+          instanceRef.current.next();
+        }
+      }, 3000); // Change slide every 3 seconds
+
+      return () => clearInterval(interval);
+    }
+  }, [instanceRef, isInteracted]);
+
+  const handleInteraction = () => {
+    setIsInteracted(true);
+  };
 
   return (
     <div className="flex w-full flex-col justify-center gap-[2rem] items-center lg:px-[4rem] mb-[5rem] xl:mt-[8rem] xl:px-[7rem] 2xl:px-[17rem] 1780px:px-[20rem]">
@@ -56,6 +75,9 @@ const Testimoniale = ({ data }: Props) => {
           {data.map((testimonial, index) => {
             return (
               <div
+                onClick={handleInteraction}
+                onMouseDown={handleInteraction}
+                onTouchStart={handleInteraction}
                 className="keen-slider__slide flex flex-col items-center justify-center"
                 key={index}
               >
@@ -76,16 +98,18 @@ const Testimoniale = ({ data }: Props) => {
           <>
             <Arrow
               left
-              onClick={(e: any) =>
-                e.stopPropagation() || instanceRef.current?.prev()
-              }
+              onClick={(e: any) => {
+                handleInteraction();
+                e.stopPropagation() || instanceRef.current?.prev();
+              }}
               disabled={currentSlide === 0}
             />
 
             <Arrow
-              onClick={(e: any) =>
-                e.stopPropagation() || instanceRef.current?.next()
-              }
+              onClick={(e: any) => {
+                handleInteraction();
+                e.stopPropagation() || instanceRef.current?.next();
+              }}
               disabled={
                 currentSlide ===
                 instanceRef.current.track.details?.slides.length - 1
@@ -102,6 +126,7 @@ const Testimoniale = ({ data }: Props) => {
               src={urlFor(testimonial.image_src).url()}
               key={idx}
               onClick={() => {
+                handleInteraction();
                 instanceRef.current?.moveToIdx(idx);
               }}
               className={

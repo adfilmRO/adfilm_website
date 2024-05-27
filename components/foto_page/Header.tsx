@@ -1,4 +1,4 @@
-// Video Page Header
+// Foto Page Header
 "use client";
 
 import React from "react";
@@ -9,7 +9,7 @@ const Header = ({ videoHeadersData }: any) => {
   let currentVideo: any;
 
   videoHeadersData.map((video: any) => {
-    if (video.id === "serviciiVideoHeader") currentVideo = video;
+    if (video.id === "serviciiFotoHeader") currentVideo = video;
   });
 
   return (
@@ -38,7 +38,7 @@ const Header = ({ videoHeadersData }: any) => {
           }}
           className="text-white text-[46px] font-mustica-semibold mt-[16rem] lg:mt-[24.35rem] 1440p:mt-[43rem] 4k:mt-[68rem] z-[10] lg:text-[122px] "
         >
-          Servicii Video
+          Servicii Foto
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}

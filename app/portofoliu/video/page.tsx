@@ -8,6 +8,7 @@ import {
   getCommercialsVideos,
   getOthersVideos,
   getVideoCopyData,
+  getVideoHeaders,
 } from "@/utils/fetchData";
 import { REVALIDATE_INTERVAL } from "@/utils/revalidate";
 
@@ -22,11 +23,12 @@ const page = async () => {
   const commercialsVideoData = await getCommercialsVideos();
   const othersVideoData = await getOthersVideos();
   const behindTheScenesVideoData = await getBehindTheScenesVideos();
+  const videoHeadersData = await getVideoHeaders()
 
   return (
     <>
       <main className="w-full relative flex flex-col justify-center items-center">
-        <Header />
+        <Header videoHeadersData = {videoHeadersData} />
         <RestOfVideoPage
           footerData={footerData}
           footerSocialLinksData={footerSocialLinksData}

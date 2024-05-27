@@ -9,16 +9,30 @@ import { REVALIDATE_INTERVAL } from "@/utils/revalidate";
 
 export const revalidate = REVALIDATE_INTERVAL;
 
-export default function Home() {
+import { getCopyHeaders, getVideoHeaders } from "@/utils/fetchData";
+
+export default async function Home() {
+  const videoHeadersData = await getVideoHeaders();
+  const copyHeadersData = await getCopyHeaders();
+
   return (
     <>
       <main
         className={`bg-black h-[100vh] scroll-snap-container overflow-x-hidden`}
       >
-        <MainPageHeader />
-        <ServiciiVideoHeader />
-        {/* <ServiciiFotoHeader /> */}
-        <PodcastHeader />
+        <MainPageHeader videoHeadersData={videoHeadersData} />
+        <ServiciiVideoHeader
+          videoHeadersData={videoHeadersData}
+          copyHeadersData={copyHeadersData}
+        />
+        {/* <ServiciiFotoHeader
+          videoHeadersData={videoHeadersData}
+          copyHeadersData={copyHeadersData}
+        /> */}
+        <PodcastHeader
+          videoHeadersData={videoHeadersData}
+          copyHeadersData={copyHeadersData}
+        />
         <RestOfMainPage />
       </main>
     </>

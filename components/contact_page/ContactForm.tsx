@@ -1,23 +1,56 @@
 "use client";
 
-import React, { useState } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import React, { useRef, useState } from "react";
+import { Formik, Form, Field } from "formik";
 import Image from "next/image";
 import * as Yup from "yup";
 
+import { motion } from "framer-motion";
+
+import emailjs from "@emailjs/browser";
+
 const ContactForm = () => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
-
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
-
-  const initialValues = {
+  const [success, setSuccess] = useState<"error" | "success" | null>(null);
+  const [initialValues, setInitialValues] = useState({
     nume: "",
     prenume: "",
     email: "",
     subiect: "",
     mesaj: "",
+  });
+  const form = useRef<any>(null);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
+  const sendEmail = (
+    values: {
+      nume: string;
+      prenume: string;
+      email: string;
+      subiect: string;
+      mesaj: string;
+    },
+    setSubmitting: any,
+    resetForm: any
+  ) => {
+    emailjs
+      .sendForm("service_8rvaowr", "template_5mv7bmi", form.current, {
+        publicKey: "wyx05WQTxXNEAOKcJ",
+      })
+      .then(
+        () => {
+          setSuccess("success");
+          setSubmitting(false);
+          resetForm();
+        },
+        (error) => {
+          setSuccess("error");
+          setSubmitting(false);
+        }
+      );
   };
 
   const contactValidationSchema = Yup.object().shape({
@@ -44,16 +77,16 @@ const ContactForm = () => {
             <Formik
               className="flex justify-center items-center w-full"
               initialValues={initialValues}
-              onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
-                  setSubmitting(false);
-                }, 400);
+              onSubmit={(values, { setSubmitting, resetForm }) => {
+                sendEmail(values, setSubmitting, resetForm);
               }}
               validationSchema={contactValidationSchema}
             >
               {({ isSubmitting, errors, touched }) => (
-                <Form className="w-[90%] lg:w-full flex flex-col gap-[1rem]">
+                <Form
+                  ref={form}
+                  className="w-[90%] lg:w-full flex flex-col gap-[1rem]"
+                >
                   <div className="flex flex-col gap-[0.5rem]">
                     <label htmlFor="nume" className="text-white">
                       Nume
@@ -149,6 +182,56 @@ const ContactForm = () => {
                       </div>
                     )}
                   </div>
+
+                  {success === "success" ? (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.5,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.15,
+                      }}
+                      className="flex w-full bg-white rounded-lg border border-l-4 border-l-[#2FB551] p-3 gap-2"
+                    >
+                      <Image
+                        width={20}
+                        height={20}
+                        src="/assets/contactok.svg"
+                        alt="contactok"
+                      />
+                      <h1 className="text-[#2FB551] text-regular">
+                        Mesajul a fost trimis cu succes.
+                      </h1>
+                    </motion.div>
+                  ) : success === "error" ? (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.5,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.15,
+                      }}
+                      className="flex w-full bg-white rounded-lg border border-l-4 border-red-500 p-3 gap-2"
+                    >
+                      <Image
+                        width={20}
+                        height={20}
+                        src="/assets/contactfail.svg"
+                        alt="contactok"
+                      />
+                      <h1 className="text-red-500 text-regular">
+                        Mesajul nu a putut fi trimis.
+                      </h1>
+                    </motion.div>
+                  ) : (
+                    ""
+                  )}
 
                   <div className="flex gap-[0.5rem] relative mt-[0.5rem] mb-[1rem]">
                     <Field

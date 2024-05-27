@@ -51,7 +51,7 @@ export async function getStaffCardData() {
   }
 
   export async function getTestimonialeData() {
-    const query = `*[_type == 'testimoniale'] {
+    const query = `*[_type == 'testimoniale'] | order(_updatedAt desc) {
       nume,
         description,
         position,
@@ -142,6 +142,25 @@ export async function getVideoCopyData() {
    return data
 }
 
+export async function getVideoHeaders() {
+  const query = `*[_type == "videoHeaders"]{title, id, videoFile{asset->{_id, url}}}`
+   const data = await client.fetch(query)
+   return data
+}
+
+export async function getCopyHeaders() {
+  const query = `*[_type == "headerCopy"] {
+    video_title,
+  video_description,
+      foto_title,
+      foto_description,
+      podcast_title,
+      podcast_description
+  }`
+   const data = await client.fetch(query)
+   return data
+}
+
 // Podcast Page (END)
 
 // Video Page (START)
@@ -164,7 +183,6 @@ export async function getOthersVideos() {
    return data
 }
 
-
 export async function getBehindTheScenesVideos() {
   const query = `*[_type == 'behindTheScenesVideos'] | order(_updatedAt desc) {
     title,
@@ -177,5 +195,41 @@ export async function getBehindTheScenesVideos() {
 
 // Video Page (END)
 
+
+// Foto Page (START)
+
+export async function getFotoCopy() {
+  const query = `*[_type == "fotoCopy"] {
+    title
+  }`
+   const data = await client.fetch(query)
+   return data
+}
+
+export async function getCorporateFoto() {
+  const query = `*[_type == "corporateFoto"] {
+    image_src
+  }`
+   const data = await client.fetch(query)
+   return data
+}
+
+export async function getFashionFoto() {
+  const query = `*[_type == "fashionFoto"] {
+    image_src
+  }`
+   const data = await client.fetch(query)
+   return data
+}
+
+export async function getProdusFoto() {
+  const query = `*[_type == "produsFoto"] {
+    image_src
+  }`
+   const data = await client.fetch(query)
+   return data
+}
+
+// Foto Page (END)
 
 

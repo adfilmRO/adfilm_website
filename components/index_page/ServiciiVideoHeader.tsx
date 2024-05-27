@@ -2,12 +2,16 @@
 
 import React from "react";
 import Link from "next/link";
-import { useWindowSize } from "@/hooks/useWindowSize";
 import { motion } from "framer-motion";
 import { IoIosArrowForward } from "react-icons/io";
 
-const ServiciiVideoHeader = () => {
-  const windowSize = useWindowSize();
+const ServiciiVideoHeader = ({ videoHeadersData, copyHeadersData }: any) => {
+  let currentVideo: any;
+
+  videoHeadersData.map((video: any) => {
+    if (video.id === "mainPageServiciiVideoHeader") currentVideo = video;
+  });
+
   return (
     <>
       <motion.div
@@ -15,11 +19,19 @@ const ServiciiVideoHeader = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 2, type: "spring", stiffness: 100 }}
-        className="serviciiBackground md:bg-[center_top_-5rem] lg:bg-[center_top_-9rem] xl:bg-[center_top_-23rem] 2xl:bg-[center_top_-30rem] select-none w-full flex flex-col relative"
+        className="relative w-full h-screen overflow-hidden"
       >
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={currentVideo.videoFile.asset.url} type="video/webm" />
+          Browser-ul nu suporta acest format.
+        </video>
         <div className="absolute hidden lg:block top-0 left-0 bg-gradient-to-b from-black opacity-100 to-transparent w-full h-[5rem] " />
         <div className="absolute hidden lg:block bottom-0 left-0 bg-gradient-to-t from-black opacity-100 to-transparent w-full h-[5rem] " />
-
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -32,13 +44,11 @@ const ServiciiVideoHeader = () => {
         >
           <div className="cardglowbackground absolute bottom-0 right-0 w-full h-full z-[0] flex flex-col gap-4 ">
             <h1 className="text-xl text-white font-mustica-semibold mt-8 ml-8">
-              Servicii Video
+              {copyHeadersData[0].video_title}
             </h1>
             <div className="bg-gradient-to-r from-gray-600 to-transparent bg-opacity-50 w-[60%] bg-cover bg-no-repeat h-[2px] ml-8" />
             <p className="text-[12px] max-w-[20rem] lg:max-w-[27rem] opacity-70 text-white font-montserrat leading-5 ml-8">
-              Oferim servicii de producție video specializate în crearea de
-              reclame captivante și de impact. De la concept la finalizare,
-              oferim soluții complete pentru producții comerciale memorabile.
+              {copyHeadersData[0].video_description}
             </p>
             <Link
               href="/portofoliu/video"
@@ -49,7 +59,6 @@ const ServiciiVideoHeader = () => {
             </Link>
           </div>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

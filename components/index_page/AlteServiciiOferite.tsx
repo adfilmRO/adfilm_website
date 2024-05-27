@@ -36,39 +36,39 @@ const AlteServiciiOferite = () => {
               stiffness: 100,
               delay: 0.3,
             }}
-            className="grid-cols-12 gap-4 w-full grid grid-rows-3 h-[12rem]"
+            className="grid-cols-12 gap-4 w-full grid grid-rows-3 h-[12rem] text-[19px]"
           >
-            <div className="col-span-3  row-span-1 p-2 text-white font-mustica-bold text-xl bg-[#504EC3] rounded-lg flex justify-center items-center">
+            <div className="col-span-3  row-span-1 p-2 text-white font-mustica-bold bg-[#504EC3] rounded-lg flex justify-center items-center">
               Producții publicitare
             </div>
-            <div className="col-span-3 p-2 text-white font-mustica-bold text-xl bg-[#504EC3] rounded-lg flex justify-center items-center">
+            <div className="col-span-3 p-2 text-white font-mustica-bold bg-[#504EC3] rounded-lg flex justify-center items-center">
               Livestreaming
             </div>
-            <div className="col-span-3  p-2 text-white font-mustica-bold text-xl bg-[#504EC3] rounded-lg flex justify-center items-center">
+            <div className="col-span-3  p-2 text-white font-mustica-bold bg-[#504EC3] rounded-lg flex justify-center items-center">
               Spot-uri radio
             </div>
-            <div className="col-span-3  p-2 text-white font-mustica-bold text-xl bg-[#504EC3] rounded-lg flex justify-center items-center">
+            <div className="col-span-3  p-2 text-white font-mustica-bold bg-[#504EC3] rounded-lg flex justify-center items-center">
               Podcast
             </div>
-            <div className="col-span-4  p-2 text-white font-mustica-bold text-xl bg-[#504EC3] rounded-lg flex justify-center items-center">
+            <div className="col-span-4  p-2 text-white font-mustica-bold bg-[#504EC3] rounded-lg flex justify-center items-center">
               Spot-uri TV de produs
             </div>
-            <div className="col-span-4 p-2 text-white font-mustica-bold text-xl bg-[#504EC3] rounded-lg flex justify-center items-center">
+            <div className="col-span-4 p-2 text-white font-mustica-bold bg-[#504EC3] rounded-lg flex justify-center items-center">
               Fotografii de produs
             </div>
-            <div className="col-span-4  p-2 text-white font-mustica-bold text-xl bg-[#504EC3] rounded-lg flex justify-center items-center">
+            <div className="col-span-4  p-2 text-white font-mustica-bold bg-[#504EC3] rounded-lg flex justify-center items-center">
               Producții video digital
             </div>
-            <div className="col-span-3 p-2 text-white font-mustica-bold text-xl bg-[#504EC3] rounded-lg flex justify-center items-center">
+            <div className="col-span-3 p-2 text-white font-mustica-bold bg-[#504EC3] rounded-lg flex justify-center items-center">
               Design grafic
             </div>
-            <div className="col-span-2  p-2 text-white font-mustica-bold text-xl bg-[#504EC3] rounded-lg flex justify-center items-center">
+            <div className="col-span-2  p-2 text-white font-mustica-bold bg-[#504EC3] rounded-lg flex justify-center items-center">
               Animații 3D
             </div>
-            <div className="col-span-4  p-2 text-white font-mustica-bold text-xl bg-[#504EC3] rounded-lg flex justify-center items-center">
+            <div className="col-span-4  p-2 text-white font-mustica-bold bg-[#504EC3] rounded-lg flex justify-center items-center">
               Fotografii de tip portret
             </div>
-            <div className="col-span-3 p-2 text-white font-mustica-bold text-xl bg-[#504EC3] rounded-lg flex justify-center items-center">
+            <div className="col-span-3 p-2 text-white font-mustica-bold bg-[#504EC3] rounded-lg flex justify-center items-center">
               Copyright
             </div>
           </motion.div>

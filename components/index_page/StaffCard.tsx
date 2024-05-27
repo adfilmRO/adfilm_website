@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { StaffCardProps } from "@/utils/types";
 import Image from "next/image";
@@ -17,8 +15,8 @@ const StaffCard = ({
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{
           duration: 1,
@@ -38,6 +36,7 @@ const StaffCard = ({
         />
         <Link
           href={instagramLink}
+          target="_blank"
           className="instagram-tag flex gap-2 p-3 rounded-lg"
         >
           <Image

@@ -5,10 +5,25 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const Header = () => {
+const Header = ({ videoHeadersData }: any) => {
+  let currentVideo: any;
+
+  videoHeadersData.map((video: any) => {
+    if (video.id === "podcastVideoHeader") currentVideo = video;
+  });
+
   return (
     <>
-      <div className="podcastPageBackground flex flex-col relative w-full h-[353px] lg:h-[500px] 1440p:h-[800px] 4k:h-[1200px] items-center">
+      <div className="flex flex-col relative w-full h-[353px] lg:h-[500px] 1440p:h-[800px] 4k:h-[1200px] items-center">
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={currentVideo.videoFile.asset.url} type="video/webm" />
+          Browser-ul nu suporta acest format.
+        </video>
         <div className="absolute lg:block top-0 left-0 bg-gradient-to-b from-black opacity-100 to-transparent w-full h-[10rem]" />
         <div className="absolute lg:block bottom-0 left-0 bg-gradient-to-t from-black opacity-100 to-transparent w-full h-[10rem]" />
         <motion.p

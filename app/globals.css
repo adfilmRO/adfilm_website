@@ -122,7 +122,6 @@
 
 }
 
-
 .mainBackground {
   background: url("/main_page/main_bg.jpg");
   background-repeat: no-repeat;
@@ -613,4 +612,24 @@ background: linear-gradient(
 @keyframes l21 {
   50%  {box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px}
   100% {box-shadow: 19px 0 0 0  , 38px 0 0 3px, 57px 0 0 7px}
+}
+
+.hardwareAccelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.FOTO_GRID {
+  columns: 4;
+  column-gap: 20px
+}
+
+.FOTO_CONTAINER {
+  transition-timing-function: ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+  .FOTO_CONTAINER:hover .FOTO_OVERLAY {
+    display: block;
+  }
 }

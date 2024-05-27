@@ -12,9 +12,9 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     path: "/portofoliu",
     submenu: true,
     subMenuItems: [
+      { title: "Video", path: "/portofoliu/video" },
       { title: "Podcast", path: "/portofoliu/podcast" },
       // { title: "Foto", path: "/portofoliu/foto" },
-      { title: "Video", path: "/portofoliu/video" },
     ],
   },
   {

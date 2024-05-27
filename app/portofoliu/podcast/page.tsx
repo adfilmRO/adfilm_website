@@ -10,6 +10,7 @@ import {
   getPodcastList,
   getFooterData,
   getFooterSocialLinks,
+  getVideoHeaders,
 } from "@/utils/fetchData";
 import { REVALIDATE_INTERVAL } from "@/utils/revalidate";
 
@@ -22,11 +23,12 @@ const page = async () => {
   const podcastListData = await getPodcastList();
   const footerData = await getFooterData();
   const footerSocialLinksData = await getFooterSocialLinks();
+  const videoHeadersData = await getVideoHeaders()
 
   return (
     <>
       <main className="w-full relative flex flex-col justify-center items-center overflow-x-hidden">
-        <Header />
+        <Header videoHeadersData = {videoHeadersData} />
         <RestOfPodcastPage
           podcastCopyData={podcastCopyData}
           podcastGalleryData={podcastGalleryData}

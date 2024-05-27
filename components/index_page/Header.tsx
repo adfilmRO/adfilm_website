@@ -109,11 +109,17 @@ const Header = () => {
                 isOpen === true ? "flex" : "hidden"
               } cursor-default right-0 p-5 text-white rounded-lg bg-black bg-opacity-70 border border-white flex-col gap-2 w-full`}
             >
+              <Link href="/portofoliu/video">
+                <p className="font-montserrat text-md hover:font-bold transition-all duration-75">
+                  Video
+                </p>
+                <div className="navMenuLine h-[1.5px] w-full bg-no-repeat mt-1" />
+              </Link>
+
               <Link href="/portofoliu/podcast">
                 <p className="font-montserrat text-md hover:font-bold transition-all duration-75">
                   Podcast
                 </p>
-                <div className="navMenuLine h-[1.5px] w-full bg-no-repeat mt-1" />
               </Link>
 
               {/* old foto link */}
@@ -124,12 +130,6 @@ const Header = () => {
                 </p>
                 <div className="navMenuLine h-[1.5px] w-full bg-no-repeat mt-1" />
               </Link> */}
-
-              <Link href="/portofoliu/video">
-                <p className="font-montserrat text-md hover:font-bold transition-all duration-75">
-                  Video
-                </p>
-              </Link>
             </div>
           </motion.div>
 

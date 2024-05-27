@@ -5,10 +5,31 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { IoIosArrowForward } from "react-icons/io";
 
-const PodcastHeader = () => {
+const PodcastHeader = ({ videoHeadersData, copyHeadersData }: any) => {
+  let currentVideo: any;
+
+  videoHeadersData.map((video: any) => {
+    if (video.id === "mainPagePodcastHeader") currentVideo = video;
+  });
+
   return (
     <>
-      <motion.div className="podcastBackground select-none w-full flex flex-col relative">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 2, type: "spring", stiffness: 100 }}
+        className="w-full h-screen overflow-hidden flex flex-col relative"
+      >
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={currentVideo.videoFile.asset.url} type="video/webm" />
+          Browser-ul nu suporta acest format.
+        </video>
         <div className="absolute hidden lg:block top-0 left-0 bg-gradient-to-b from-black opacity-100 to-transparent w-full h-[5rem] " />
         <div className="absolute hidden lg:block bottom-0 left-0 bg-gradient-to-t from-black opacity-100 to-transparent w-full h-[5rem] " />
 
@@ -24,14 +45,11 @@ const PodcastHeader = () => {
         >
           <div className="cardglowbackground absolute bottom-0 right-0 w-full h-full z-[0] flex flex-col gap-4 ">
             <h1 className="text-xl text-white font-mustica-semibold mt-8 ml-8">
-              Podcast
+              {copyHeadersData[0].podcast_title}
             </h1>
             <div className="bg-gradient-to-r from-gray-600 to-transparent bg-opacity-50 w-[60%] bg-cover bg-no-repeat h-[2px] ml-8" />
             <p className="text-[12px] max-w-[20rem] lg:max-w-[29rem] opacity-70 text-white font-montserrat leading-5 ml-8">
-              Oferim servicii complete pentru a vă transforma ideile în
-              producții de calitate. Cu o gamă variată de spații de înregistrare
-              și echipamente de ultimă generație, suntem alegerea perfectă
-              pentru realizarea proiectelor audio.
+              {copyHeadersData[0].podcast_description}
             </p>
             <Link
               href="/portofoliu/podcast"
