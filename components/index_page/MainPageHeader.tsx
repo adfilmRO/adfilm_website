@@ -28,6 +28,8 @@ const MainPageHeader = ({ videoHeadersData }: any) => {
         Browser-ul nu suporta acest format.
       </motion.video>
 
+      <div className="mouse-scroll" />
+
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white">
         {windowSize.width < 1024 ? (
           <motion.h1
