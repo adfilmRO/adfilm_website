@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/react";
+
 import Header from "@/components/index_page/Header";
 import HeaderMobile from "@/components/index_page/HeaderMobile";
 import NextTopLoader from "nextjs-toploader";
@@ -38,6 +40,7 @@ export default function RootLayout({
         <Header />
         <HeaderMobile />
         {children}
+        <Analytics />
       </body>
     </html>
   );
