@@ -114,6 +114,7 @@ const ProdusFotoGrid = ({ data }: any) => {
           return (
             <div
               key={index}
+              onClick={() => handleClick(index)}
               className="FOTO_CONTAINER relative mb-[20px] rounded-lg w-full break-inside-avoid hover:cursor-pointer duration-150 hover:pointer-cursor hover: hover:scale-[105%] transition-all hover:outline hover:outline-white hover:outline-[1px]"
             >
               <div
