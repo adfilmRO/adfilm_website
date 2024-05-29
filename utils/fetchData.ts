@@ -87,7 +87,8 @@ export async function getPodcastCopy() {
 export async function getPodcastVideo() {
   const query = `*[_type == 'podcastVideo'] | order(_updatedAt desc) {
     title,
-      youtube_link
+      youtube_link,
+      type
   }`
    const data = await client.fetch(query)
    return data
@@ -168,7 +169,8 @@ export async function getCopyHeaders() {
 export async function getCommercialsVideos() {
   const query = `*[_type == 'commercialsVideo'] | order(_updatedAt desc) {
     title,
-      youtube_link
+      youtube_link,
+      type
   } `
    const data = await client.fetch(query)
    return data
@@ -177,7 +179,8 @@ export async function getCommercialsVideos() {
 export async function getOthersVideos() {
   const query = `*[_type == 'othersVideos'] | order(_updatedAt desc) {
     title,
-      youtube_link
+      youtube_link,
+      type
   } `
    const data = await client.fetch(query)
    return data
@@ -186,7 +189,8 @@ export async function getOthersVideos() {
 export async function getBehindTheScenesVideos() {
   const query = `*[_type == 'behindTheScenesVideos'] | order(_updatedAt desc) {
     title,
-      youtube_link
+      youtube_link,
+      type
   } `
    const data = await client.fetch(query)
    return data

@@ -16,6 +16,20 @@ export default {
             description:
             'Id-ul de la linkul de YouTube.',
           },
+          {
+            name: 'type',
+            type: 'string',
+            title: 'Thumbnail',
+            description:
+            'DOAR IN CAZUL IN CARE CU "maxresdefault.jpg" THUMBNAIL-UL NU APARE, FOLOSITI "hqdefault.jpg".',
+            options: {
+              list: [
+                {title: 'maxresdefault.jpg', value: 'maxresdefault'},
+                {title: 'hqdefault.jpg', value: 'hqdefault'}
+              ],
+            },
+            initialValue: 'maxresdefault'
+          },
     ],
   }
   

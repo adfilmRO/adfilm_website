@@ -27,7 +27,7 @@ const DeLaReclame = ({
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [category, setCategory] = useState<categoryType>(
-    "Video Editing & Post Production Services"
+    "Commercials"
   );
   const dropdown: any = useRef(null);
 
