@@ -3,7 +3,7 @@ import VideoCard from "@/components/index_page/VideoCard";
 const OthersVideoGrid = ({ data }: any) => {
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <h1 className="text-white text-[32px] mb-[2rem] font-mustica-semibold">
+      <h1 className="text-white text-[32px] mb-[2rem] font-mustica-semibold text-center">
         Video Editing & Post Production Services
       </h1>
 

@@ -26,7 +26,9 @@ const DeLaReclame = ({
 }: any) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [category, setCategory] = useState<categoryType>("Others");
+  const [category, setCategory] = useState<categoryType>(
+    "Video Editing & Post Production Services"
+  );
   const dropdown: any = useRef(null);
 
   const loadingInterval = Math.floor(Math.random() * (1000 - 300 + 1)) + 300;
@@ -123,8 +125,10 @@ const DeLaReclame = ({
             Commercials
           </div>
           <div
-            onClick={() => changeCategory("Others")}
-            className={`flex justify-between cursor-pointer p-3 rounded-lg transition-all duration-100 items-center font-mustica-semibold ${category === "Others" ? "bg-adfilm-purple text-white border-adfilm-purple border" : "bg-transparent hover:bg-white text-white hover:text-black border"}`}
+            onClick={() =>
+              changeCategory("Video Editing & Post Production Services")
+            }
+            className={`flex justify-between cursor-pointer p-3 rounded-lg transition-all duration-100 items-center font-mustica-semibold ${category === "Video Editing & Post Production Services" ? "bg-adfilm-purple text-white border-adfilm-purple border" : "bg-transparent hover:bg-white text-white hover:text-black border"}`}
           >
             Video Editing & Post Production Services
           </div>
@@ -139,19 +143,24 @@ const DeLaReclame = ({
         {/* PC SELECT */}
 
         {/* VIDEO GRID */}
-        {isLoading === false ? (
+
+        <h1 className="text-white font-mustica-semibold text-xl">
+          HELLO THERE
+        </h1>
+
+        {/* {isLoading === false ? (
           <div className="lg:w-full w-[90%] videoLoading-Animation rounded-xl h-[150rem] bg-purple-500 opacity-20 p-2 animate-pulse"></div>
         ) : (
           <>
             {category === "Commercials" ? (
               <CommercialsVideoGrid data={commercialsVideoData} />
-            ) : category === "Others" ? (
+            ) : category === "Video Editing & Post Production Services" ? (
               <OthersVideoGrid data={othersVideoData} />
             ) : (
               <BehindTheScenesVideoGrid data={behindTheScenesVideoData} />
             )}
           </>
-        )}
+        )} */}
         <div className="mb-[4rem] lg:mb-0 z-[10]">
           <ScrollToTopButton />
         </div>
