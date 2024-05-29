@@ -144,12 +144,10 @@ const DeLaReclame = ({
 
         {/* VIDEO GRID */}
 
-        <h1 className="text-white font-mustica-semibold text-xl">
-          HELLO THERE
-        </h1>
-
-        {/* {isLoading === false ? (
-          <div className="lg:w-full w-[90%] videoLoading-Animation rounded-xl h-[150rem] bg-purple-500 opacity-20 p-2 animate-pulse"></div>
+        {isLoading === false ? (
+          <div
+            className={`lg:w-full hidden w-[90%] videoLoading-Animation rounded-xl h-[150rem] bg-purple-500 opacity-20 p-2 animate-pulse`}
+          ></div>
         ) : (
           <>
             {category === "Commercials" ? (
@@ -160,7 +158,7 @@ const DeLaReclame = ({
               <BehindTheScenesVideoGrid data={behindTheScenesVideoData} />
             )}
           </>
-        )} */}
+        )}
         <div className="mb-[4rem] lg:mb-0 z-[10]">
           <ScrollToTopButton />
         </div>
