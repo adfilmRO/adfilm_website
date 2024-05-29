@@ -2,8 +2,6 @@ import React from "react";
 import { StaffCardProps } from "@/utils/types";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-
 import { urlFor } from "@/app/lib/sanity";
 
 const StaffCard = ({
@@ -14,18 +12,7 @@ const StaffCard = ({
 }: StaffCardProps) => {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1,
-          type: "spring",
-          stiffness: 100,
-          delay: 0.15,
-        }}
-        className="staffCard staffCardBorder gap-3 text-white w-[280px] h-[392px] items-center rounded-2xl flex flex-col px-1 py-2"
-      >
+      <div className="staffCard staffCardBorder gap-3 text-white w-[280px] h-[392px] items-center rounded-2xl flex flex-col px-1 py-2">
         <Image
           width={300}
           height={300}
@@ -54,7 +41,7 @@ const StaffCard = ({
 
         <h1 className="font-montserrat text-[12px]">{position}</h1>
         <div className="w-[80%] h-[1px] bg-gradient-to-r from-transparent via-gray-500 to-transparent" />
-      </motion.div>
+      </div>
     </>
   );
 };
