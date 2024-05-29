@@ -4,7 +4,7 @@ const OthersVideoGrid = ({ data }: any) => {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <h1 className="text-white text-[32px] mb-[2rem] font-mustica-semibold">
-        Others
+        Video Editing & Post Production Services
       </h1>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 w-full auto-rows-auto gap-[2rem] justify-center items-center place-items-center place-content-center mb-[4rem] lg:mb-[3rem]">

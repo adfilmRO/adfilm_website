@@ -12,7 +12,11 @@ import OthersVideoGrid from "./OthersVideoGrid";
 import AlteServiciiOferite from "@/components/index_page/AlteServiciiOferite";
 import ScrollToTopButton from "./ScrollToTop";
 
-type categoryType = "Commercials" | "Behind The Scenes" | "Others";
+type categoryType =
+  | "Commercials"
+  | "Behind The Scenes"
+  | "Others"
+  | "Video Editing & Post Production Services";
 
 const DeLaReclame = ({
   videoCopyData,
@@ -22,7 +26,7 @@ const DeLaReclame = ({
 }: any) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [category, setCategory] = useState<categoryType>("Commercials");
+  const [category, setCategory] = useState<categoryType>("Others");
   const dropdown: any = useRef(null);
 
   const loadingInterval = Math.floor(Math.random() * (1000 - 300 + 1)) + 300;
@@ -82,10 +86,12 @@ const DeLaReclame = ({
             <div className="navMenuLine h-[1.5px] w-full bg-no-repeat mt-1" />
 
             <p
-              onClick={() => changeCategory("Others")}
+              onClick={() =>
+                changeCategory("Video Editing & Post Production Services")
+              }
               className="font-montserrat text-md hover:font-bold transition-all duration-75 cursor-pointer"
             >
-              Others
+              Video Editing & Post Production Services
             </p>
             <div className="navMenuLine h-[1.5px] w-full bg-no-repeat mt-1" />
 
@@ -120,7 +126,7 @@ const DeLaReclame = ({
             onClick={() => changeCategory("Others")}
             className={`flex justify-between cursor-pointer p-3 rounded-lg transition-all duration-100 items-center font-mustica-semibold ${category === "Others" ? "bg-adfilm-purple text-white border-adfilm-purple border" : "bg-transparent hover:bg-white text-white hover:text-black border"}`}
           >
-            Others
+            Video Editing & Post Production Services
           </div>
           <div
             onClick={() => changeCategory("Behind The Scenes")}
@@ -134,7 +140,7 @@ const DeLaReclame = ({
 
         {/* VIDEO GRID */}
         {isLoading === false ? (
-          <div className="lg:w-full w-[90%] videoLoading-Animation rounded-xl h-[150rem] bg-purple-500 opacity-20 p-2 animate-pulse "></div>
+          <div className="lg:w-full w-[90%] videoLoading-Animation rounded-xl h-[150rem] bg-purple-500 opacity-20 p-2 animate-pulse"></div>
         ) : (
           <>
             {category === "Commercials" ? (
