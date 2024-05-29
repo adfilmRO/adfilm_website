@@ -26,6 +26,7 @@ const ServiciiVideoHeader = ({ videoHeadersData, copyHeadersData }: any) => {
           autoPlay
           loop
           muted
+          playsInline
         >
           <source src={currentVideo.videoFile.asset.url} type="video/webm" />
           Browser-ul nu suporta acest format.
@@ -47,7 +48,7 @@ const ServiciiVideoHeader = ({ videoHeadersData, copyHeadersData }: any) => {
               {copyHeadersData[0].video_title}
             </h1>
             <div className="bg-gradient-to-r from-gray-600 to-transparent bg-opacity-50 w-[60%] bg-cover bg-no-repeat h-[2px] ml-8" />
-            <p className="text-[12px] max-w-[20rem] lg:max-w-[27rem] opacity-70 text-white font-montserrat leading-5 ml-8">
+            <p className="text-[12px] max-w-[20rem] lg:max-w-[27rem] xl:max-w-[30rem] opacity-70 text-white font-montserrat leading-5 ml-8">
               {copyHeadersData[0].video_description}
             </p>
             <Link

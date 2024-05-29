@@ -23,6 +23,7 @@ const MainPageHeader = ({ videoHeadersData }: any) => {
         autoPlay
         loop
         muted
+        playsInline
       >
         <source src={currentVideo.videoFile.asset.url} type="video/webm" />
         Browser-ul nu suporta acest format.
