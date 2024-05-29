@@ -146,7 +146,7 @@ const DeLaReclame = ({
 
         {isLoading === false ? (
           <div
-            className={`lg:w-full hidden w-[90%] videoLoading-Animation rounded-xl h-[150rem] bg-purple-500 opacity-20 p-2 animate-pulse`}
+            className={`lg:w-full w-[90%] videoLoading-Animation rounded-xl h-[150rem] bg-purple-500 opacity-20 p-2 animate-pulse`}
           ></div>
         ) : (
           <>

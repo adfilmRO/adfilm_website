@@ -7,7 +7,7 @@ const OthersVideoGrid = ({ data }: any) => {
         Video Editing & Post Production Services
       </h1>
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 w-full auto-rows-auto gap-[2rem] justify-center items-center place-items-center place-content-center mb-[4rem] lg:mb-[3rem]">
+      <div className="grid lg:grid-cols-2 grid-cols-1 w-full auto-rows-auto gap-[2rem] h-full mb-[4rem] lg:mb-[3rem]">
         {data.map((video: any, index: any) => {
           if (index === 0 || index % 3 === 0) {
             return (
