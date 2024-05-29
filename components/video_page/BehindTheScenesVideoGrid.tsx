@@ -16,6 +16,7 @@ const BehindTheScenesVideoGrid = ({ data }: any) => {
                 className="w-full h-full lg:col-span-2 lg:lg:h-[650px] flex justify-center items-center"
               >
                 <VideoCard
+                  type={video.type}
                   title={video.title}
                   youtube_link={video.youtube_link}
                 />
@@ -28,6 +29,7 @@ const BehindTheScenesVideoGrid = ({ data }: any) => {
                 className="w-full h-full flex lg:h-[334px] justify-center items-center"
               >
                 <VideoCard
+                  type={video.type}
                   title={video.title}
                   youtube_link={video.youtube_link}
                 />

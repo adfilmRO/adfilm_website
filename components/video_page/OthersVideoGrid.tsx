@@ -18,6 +18,7 @@ const OthersVideoGrid = ({ data }: any) => {
                 <VideoCard
                   title={video.title}
                   youtube_link={video.youtube_link}
+                  type={video.type}
                 />
               </div>
             );
@@ -30,6 +31,7 @@ const OthersVideoGrid = ({ data }: any) => {
                 <VideoCard
                   title={video.title}
                   youtube_link={video.youtube_link}
+                  type={video.type}
                 />
               </div>
             );

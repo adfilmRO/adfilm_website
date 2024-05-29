@@ -42,6 +42,7 @@ const PovestileBune = ({
           <VideoCard
             title={podcastVideoData[2].title}
             youtube_link={podcastVideoData[2].youtube_link}
+            type={podcastVideoData[2].type}
           />
         </motion.div>
         <motion.p
@@ -74,6 +75,7 @@ const PovestileBune = ({
             <VideoCard
               title={podcastVideoData[0].title}
               youtube_link={podcastVideoData[0].youtube_link}
+              type={podcastVideoData[0].type}
             />
           </motion.div>
           <motion.div
@@ -91,6 +93,7 @@ const PovestileBune = ({
             <VideoCard
               title={podcastVideoData[1].title}
               youtube_link={podcastVideoData[1].youtube_link}
+              type={podcastVideoData[1].type}
             />
           </motion.div>
         </div>

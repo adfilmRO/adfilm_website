@@ -6,7 +6,7 @@ import "react-youtube-lazyload/dist/index.css";
 // _16Q0f className for the player
 //
 
-const VideoCard = ({ title, youtube_link }: VideoCardProps) => {
+const VideoCard = ({ title, youtube_link, type }: VideoCardProps) => {
   return (
     <>
       <div className="staffCard cursor-pointer staffCardBorder text-white w-[334px] lg:w-full h-full items-center rounded-2xl flex flex-col lg:items-start px-0 lg:px-2 py-2">
@@ -14,6 +14,7 @@ const VideoCard = ({ title, youtube_link }: VideoCardProps) => {
           videoId={youtube_link}
           privacy={true}
           aria-label={title}
+          type={type}
           className="select-none oveflow-hidden w-[314px] h-[166px] shadow-sm shadow-purple-900 lg:h-full lg:w-full rounded-lg staffCardBorder"
         />
 

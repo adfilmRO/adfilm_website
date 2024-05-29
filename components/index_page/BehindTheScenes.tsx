@@ -2,18 +2,22 @@
 
 import VideoCard from "@/components/index_page/VideoCard";
 import { motion } from "framer-motion";
+import CustomYouTube from "../video_page/CustomYouTube";
 
 interface Props {
   data: {
     title: string;
     youtube_link: string;
+    type: string;
   }[];
 }
 
 const BehindTheScenes = ({ data }: Props) => {
+  console.log(data);
+
   return (
     <>
-      <div className="flex flex-col w-full justify-center gap-[4rem] items-center lg:mb-[4rem] xl:mb-0 my-[4rem] lg:my-0 xl:mt-[2rem] hardwareAccelerated">
+      <div className="flex flex-col w-full justify-center gap-[4rem] lg:mt-[3rem] items-center lg:mb-[4rem] xl:mb-0 my-[4rem] lg:my-0 xl:mt-[4rem] hardwareAccelerated">
         <motion.h1
           initial={{ opacity: 0, y: -50, scale: 0.5 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -49,6 +53,7 @@ const BehindTheScenes = ({ data }: Props) => {
                 <VideoCard
                   key={index}
                   title={card.title}
+                  type={card.type}
                   youtube_link={card.youtube_link}
                 />
               </div>
