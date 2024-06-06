@@ -17,6 +17,7 @@ const CommercialsVideoGrid = ({ data }: any) => {
               >
                 <VideoCard
                   title={video.title}
+                  type={video.type}
                   youtube_link={video.youtube_link}
                 />
               </div>
@@ -29,6 +30,7 @@ const CommercialsVideoGrid = ({ data }: any) => {
               >
                 <VideoCard
                   title={video.title}
+                  type={video.type}
                   youtube_link={video.youtube_link}
                 />
               </div>

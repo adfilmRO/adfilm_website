@@ -19,15 +19,16 @@ export default {
           {
             name: 'type',
             type: 'string',
-            title: 'maxresdefault.jpg / hqdefault.jpg',
+            title: 'Thumbnail',
             description:
             'DOAR IN CAZUL IN CARE CU "maxresdefault.jpg" THUMBNAIL-UL NU APARE, FOLOSITI "hqdefault.jpg".',
             options: {
               list: [
                 {title: 'maxresdefault.jpg', value: 'maxresdefault'},
-                {tittle: 'hqdefault.jpg', value: 'hqdefault'}
+                {title: 'hqdefault.jpg', value: 'hqdefault'}
               ],
             },
+            initialValue: 'maxresdefault'
           },
     ],
   }

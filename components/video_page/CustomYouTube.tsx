@@ -10,6 +10,7 @@ interface YouTubeProps {
   onPlayChange?: (playing: boolean) => void;
   playing?: boolean;
   className?: string;
+  type: string;
 }
 
 const CustomYouTube: React.FC<YouTubeProps> = (props) => {
@@ -21,6 +22,7 @@ const CustomYouTube: React.FC<YouTubeProps> = (props) => {
     onPlayChange,
     playing = false,
     className = "",
+    type,
   } = props;
 
   const [showVideo, setShowVideo] = useState(playing);
@@ -94,7 +96,7 @@ const CustomYouTube: React.FC<YouTubeProps> = (props) => {
         <div
           className={`${styles.image} ${className}`}
           style={{
-            backgroundImage: `url(https://img.youtube.com/vi/${videoId}/maxresdefault.jpg)`,
+            backgroundImage: `url(https://img.youtube.com/vi/${videoId}/${type}.jpg)`,
             width: width,
             height: height,
           }}

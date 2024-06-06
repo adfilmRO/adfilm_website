@@ -29,7 +29,9 @@ const MainPageHeader = ({ videoHeadersData }: any) => {
         Browser-ul nu suporta acest format.
       </motion.video>
 
-      <div className="mouse-scroll" />
+      {/* <div className="hidden lg:block">
+        <div className="mouse-scroll" />
+      </div> */}
 
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white">
         {windowSize.width < 1024 ? (
@@ -56,7 +58,7 @@ const MainPageHeader = ({ videoHeadersData }: any) => {
               type: "spring",
               stiffness: 100,
             }}
-            className="text-8xl font-mustica-medium mt-[30rem] 2xl:mt-[35rem] mb-[1rem] 3xl:mt-[50rem] 1440p:mt-[65rem] 4xl:mt-[70rem] 5xl:mt-[80rem] 4k:mt-[110rem]"
+            className="text-8xl font-mustica-medium mt-[30rem] 2xl:mt-[35rem] mb-[1rem] 3xl:mt-[50rem] 1440p:mt-[65rem] 4xl:mt-[70rem] 5xl:mt-[80rem] 4k:mt-[95rem]"
           >
             Studio de producție
           </motion.h1>

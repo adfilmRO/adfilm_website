@@ -34,7 +34,8 @@ export async function getStaffCardData() {
   export async function getBehindTheScenesData() {
     const query = `*[_type == 'behindTheScenes'] | order(_updatedAt desc) {
       title,
-        youtube_link
+        youtube_link,
+        type
     }`;
     const data = await client.fetch(query);
     return data;
