@@ -13,8 +13,6 @@ interface Props {
 }
 
 const BehindTheScenes = ({ data }: Props) => {
-  console.log(data);
-
   return (
     <>
       <div className="flex flex-col w-full justify-center gap-[4rem] lg:mt-[3rem] items-center lg:mb-[4rem] xl:mb-0 my-[4rem] lg:my-0 xl:mt-[4rem] hardwareAccelerated">
