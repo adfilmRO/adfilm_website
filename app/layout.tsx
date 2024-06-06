@@ -17,7 +17,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "adfilm",
-  description: "adfilm application",
+  description: "Studio de productie video, podcast, foto.",
 };
 
 export default function RootLayout({

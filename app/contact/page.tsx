@@ -8,6 +8,13 @@ export const revalidate = REVALIDATE_INTERVAL;
 
 import { getFooterData, getFooterSocialLinks } from "@/utils/fetchData";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "adfilm - Contact",
+  description: "Trimite-ne un email la contact@adfilm.ro",
+};
+
 const page = async () => {
   const footerData = await getFooterData();
   const footerSocialLinksData = await getFooterSocialLinks();

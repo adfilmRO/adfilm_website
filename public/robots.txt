@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin
+
+# Host
+Host: https://adfilm.ro
+
+# Sitemaps
+Sitemap: https://adfilm.ro/sitemap.xml

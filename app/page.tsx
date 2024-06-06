@@ -10,6 +10,12 @@ import { REVALIDATE_INTERVAL } from "@/utils/revalidate";
 export const revalidate = REVALIDATE_INTERVAL;
 
 import { getCopyHeaders, getVideoHeaders } from "@/utils/fetchData";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "adfilm - Home",
+  description: "Agenție de producție Video & Audio 360.",
+};
 
 export default async function Home() {
   const videoHeadersData = await getVideoHeaders();

@@ -16,6 +16,14 @@ export const revalidate = REVALIDATE_INTERVAL;
 
 import { getFooterData, getFooterSocialLinks } from "@/utils/fetchData";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "adfilm - Foto",
+  description:
+    "Capturăm esența fiecărui moment într-un cadru perfect! Aducem profesionalismul și creativitatea la orice proiect.",
+};
+
 const page = async () => {
   const footerData = await getFooterData();
   const footerSocialLinksData = await getFooterSocialLinks();
