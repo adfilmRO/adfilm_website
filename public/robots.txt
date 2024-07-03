@@ -6,6 +6,14 @@ Allow: /
 User-agent: *
 Disallow: /admin
 
+# *
+User-agent: *
+Disallow: /despre-noi
+
+# *
+User-agent: *
+Disallow: /portofoliu/commercials
+
 # Host
 Host: https://adfilm.ro
 

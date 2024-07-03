@@ -7,6 +7,8 @@ module.exports = {
       policies: [
         { userAgent: '*', allow: '/' },
         { userAgent: '*', disallow: '/admin' },
+        { userAgent: '*', disallow: '/despre-noi' },
+        { userAgent: '*', disallow: '/portofoliu/commercials' },
       ],
     },
     additionalPaths: async (config) => [
