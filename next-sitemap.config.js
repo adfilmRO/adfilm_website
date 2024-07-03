@@ -6,9 +6,11 @@ module.exports = {
     robotsTxtOptions: {
       policies: [
         { userAgent: '*', allow: '/' },
+        { userAgent: '*', allow: '/icon.ico' },
         { userAgent: '*', disallow: '/admin' },
         { userAgent: '*', disallow: '/despre-noi' },
         { userAgent: '*', disallow: '/portofoliu/commercials' },
+        { userAgent: '*', disallow: '/portofoliu' },
       ],
     },
     additionalPaths: async (config) => [
